@@ -1,4 +1,6 @@
 var path = require('path')
+var webpack = require('webpack')
+var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var utils = require('./utils')
 var config = require('../config')
 var vueLoaderConfig = require('./vue-loader.conf')
@@ -8,21 +10,21 @@ function resolve (dir) {
 }
 
 module.exports = {
+  devtool: config.package.productionSourceMap ? '#source-map' : false,
   entry: {
-    app: './src/main.js'
+    app: './src/components/index.js'
   },
   output: {
-    path: config.build.assetsRoot,
-    filename: '[name].js',
-    publicPath: process.env.NODE_ENV === 'production'
-      ? config.build.assetsPublicPath
-      : config.dev.assetsPublicPath
+    path: config.package.assetsRoot,
+    filename: `${config.package.libraryName}.js`,
+    publicPath: config.package.assetsPublicPath,
+    // library: config.package.libraryName,
+    libraryTarget: 'umd'
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
     alias: {
-      'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('src')
+      'vue$': 'vue/dist/vue.esm.js'
     }
   },
   module: {
@@ -51,7 +53,7 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('img/[name].[hash:7].[ext]')
+          name: utils.packagepAssetsPath('img/[name].[hash:7].[ext]')
         }
       },
       {
@@ -59,13 +61,24 @@ module.exports = {
         loader: 'url-loader',
         options: {
           limit: 10000,
-          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
+          name: utils.packagepAssetsPath('fonts/[name].[hash:7].[ext]')
         }
-      },
-      {
-        test: /\.md/,
-        loader: 'vue-markdown-loader'
       }
     ]
-  }
+  },
+  plugins: [
+    new webpack.DefinePlugin({
+        'process.env': {
+            NODE_ENV: '"production"'
+        }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+        sourceMap: config.package.productionSourceMap,
+        compress: {
+          warnings: false,
+          drop_console: false
+        }
+    }),
+    new ExtractTextPlugin(`${config.package.libraryName}.css`),
+  ]
 }

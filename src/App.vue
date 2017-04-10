@@ -4,7 +4,9 @@
   </div>
 </template>
 
-<style></style>
+<style lang="stylus">
+	@import './style/core/';
+</style>
 
 <script>
   export default {
