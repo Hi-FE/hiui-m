@@ -1,0 +1,34 @@
+@import '../../style/';
+
+.hiui-icon { 
+  position: relative;
+  display: inline-block;
+  vertical-align: text-top;
+  width: _icon_md;
+  height: _icon_md;
+  overflow: hidden;
+  
+  svg {
+    display: block;
+  }
+}
+
+for size in _size {
+  .hiui-icon-{size} {
+    width: _icon_ + size;
+    height: _icon_ + size;
+  }
+}
+
+.hiui-icon-rotate {
+  animation: rotate 1s infinite linear;
+}
+
+@keyframes rotate {
+  form {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

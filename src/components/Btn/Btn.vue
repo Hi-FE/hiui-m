@@ -1,27 +1,31 @@
 <template>
-  <button :style="style">
-    <span>
+  <button :class="component_class">
+    <Icon v-if="is_loading" :size="size" name="loading" :rotate="true"></Icon>
+    <Icon v-if="!is_loading && prefix" :size="size" :name="prefix"></Icon>
+    <span v-if="loading_text">
+      {{ loading_text }}
+    </span>
+    <span v-else>
       <slot></slot>
     </span>
+    <Icon v-if="!is_loading && suffix" :size="size" :name="suffix"></Icon>
   </button>
 </template>
 
-<style lang="stylus">
-  @import './style/'
+<style lang="stylus" scope>
+  @import './style/';
 </style>
 
 <script>
-  import { fontSize, inter, gap } from '@/style/'
-
   export default {
     name: 'Btn',
+    components: {
+      Icon: require('@/components/Icon')
+    },
     props: {
       size: {
-        default: 'md',
-        type: String,
-        validator (val) {
-          return ['sm', 'md', 'lg'].some((v) => v === val)
-        }
+        default: '',
+        type: String
       },
       disabled: {
         default: false,
@@ -31,8 +35,9 @@
         default: false,
         type: Boolean
       },
-      prefix: [Object, String],
-      suffix: [Object, String]
+      loading_text: String,
+      prefix: String,
+      suffix: String
     },
     data () {
       return {
@@ -40,12 +45,14 @@
       }
     },
     computed: {
-      style: function() {
-        return {
-          padding: `0 ${gap[this.size]}`,
-          fontSize: fontSize[this.size],
-          height: inter[this.size]
-        }
+      component_class: function () {
+        return [
+          'hiui-btn',
+          {
+            [`hiui-btn-${this.size}`]: this.size,
+            'disabled': this.disabled
+          }
+        ]
       }
     }
   }

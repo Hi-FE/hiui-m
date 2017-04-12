@@ -11,16 +11,16 @@
     position: fixed;
     top: 100px;
     right: 20px;
-    border: 10px solid _black;
     border-radius: 4px;
-    background-color: _white;
-    box-shadow: 0 0 5px 3px rgba(0, 0, 0, .16);
+    background-color: _grey_lighter;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, .26);
+    overflow: hidden;
   }
 </style>
 
 <script>
   export default {
-    name: 'Header',
+    name: 'Preview',
     props: ['width', 'height'],
     computed: {
       size: function() {

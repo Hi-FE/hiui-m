@@ -1,7 +1,6 @@
-@import '../../style/themes/default'
-@import '../../style/colors'
+@import '../../style/';
 
-button {
+.hiui-btn {
   display: inline-block;
   margin-bottom: 0;
   font-weight: 500;
@@ -9,9 +8,10 @@ button {
   cursor: pointer;
   border: 1px solid transparent;
   white-space: nowrap;
+  height: _inner_md;
   line-height: 1.5;
-  padding: 0 15px;
-  font-size: 12px;
+  padding: 0 _gap_md;
+  font-size: _font_md;
   border-radius: 4px;
   user-select: none;
   transition: all .3s cubic-bezier(.645, .045, .355, 1);
@@ -20,4 +20,17 @@ button {
   background-color: #fff;
   border-color: #d9d9d9;
   outline: none;
+  
+  &.disabled {
+    cursor: not-allowed;
+    opacity: .5;
+  }
+}
+
+for size in _size {
+  .hiui-btn-{size} {
+    padding: 0 _gap_ + size;
+    font-size: _font_ + size;
+    height: _inner_ + size
+  }
 }

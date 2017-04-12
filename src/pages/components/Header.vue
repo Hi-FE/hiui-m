@@ -1,11 +1,12 @@
 <template>
   <header class="header">
     <h3 class="logo">
-      Hiui-M
+      {{ config.name }}
+      <small>{{ config.version }}</small>
     </h3>
     <ul class="menu">
       <li>
-        <a href="https://github.com/Hi-FE/hiui-m">Github</a>
+        <a :href="config.github">Github</a>
       </li>
     </ul>
   </header>
@@ -27,8 +28,13 @@
     
     .logo {
       float: left;
-      width: 100px;
-      text-align: center;
+      padding: 0 20px;
+
+      small {
+        font-size: 12px;
+        opacity: .3;
+        letter-spacing: 1.3px;
+      }
     }
     
     .menu {
@@ -44,11 +50,14 @@
 </style>
 
 <script>
+  import config from '@/config.json'
+
   export default {
     name: 'Header',
-    components: {
-    },
-    methods: {
+    data () {
+      return {
+        config
+      }
     }
   }
 </script>

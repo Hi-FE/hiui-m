@@ -15,7 +15,7 @@
     .title {
       height: 50px;
       line-height: 50px;
-      background-color: _blue;
+      background-color: _black;
       color: _white;
       text-align: center;
     }
@@ -24,7 +24,7 @@
 
 <script>
   export default {
-    name: 'Header',
+    name: 'demo',
     props: {
       title: {
         default: '',
@@ -38,9 +38,6 @@
         default: false,
         type: Boolean
       }
-    },
-    mounted () {
-      console.log(this.$slots);
     }
   }
 </script>

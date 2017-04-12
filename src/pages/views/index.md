@@ -11,5 +11,17 @@ $ npm install hiui-m --save
 ## 使用
 
 ```html
-<btn :size="'lg'">Button</btn>
+<template>
+  <Btn size="lg">Hiui-M</Btn>
+</template>
+
+<script>
+  import Btn from 'hiui-m/src/Btn'
+
+  export default {
+    components: {
+      Btn
+    }
+  }
+</script>
 ```

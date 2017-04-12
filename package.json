@@ -4,6 +4,7 @@
   "description": "UI components for m.wantu.cn",
   "author": "不一 <buuyii@hitour.cc>",
   "private": true,
+  "main": "./dist/hiuim.js",
   "scripts": {
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
@@ -12,6 +13,7 @@
   },
   "dependencies": {
     "github-markdown-css": "^2.6.0",
+    "highlight.js": "^9.10.0",
     "vue": "^2.2.2",
     "vue-router": "^2.2.0"
   },

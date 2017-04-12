@@ -17,11 +17,32 @@ export default new Router({
         },
         component: require('@/pages/views/index.md')
       }, {
-        path: '/Btn',
+        path: '/Standard',
+        name: 'Standard',
+        meta: {
+          noPreview: true
+        },
+        component: require('@/pages/views/standard.md')
+      }, {
+        path: '/Components',
+        name: 'Components',
+        meta: {
+          noPreview: true
+        },
+        component: require('@/pages/views/components.md')
+      }, {
+        path: '/Components/Btn',
         name: 'Btn',
         components: {
           default: require('@/components/Btn/index.md'),
           preview: require('@/pages/demo/Btn.vue')
+        }
+      }, {
+        path: '/Components/Icon',
+        name: 'Icon',
+        components: {
+          default: require('@/components/Icon/index.md'),
+          preview: require('@/pages/demo/Icon.vue')
         }
       }]
     }
