@@ -56,7 +56,7 @@
     components: {
       demo: require('@/pages/components/demo.vue'),
       demoItem: require('@/pages/components/demo-item.vue'),
-      Btn: require('@/components/Btn')
+      Btn: require('@/components/Btn/Btn.vue')
     }
   }
 </script>

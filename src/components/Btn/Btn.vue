@@ -20,7 +20,7 @@
   export default {
     name: 'Btn',
     components: {
-      Icon: require('@/components/Icon')
+      Icon: require('@/components/Icon/Icon.vue')
     },
     props: {
       size: {

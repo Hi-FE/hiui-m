@@ -25,7 +25,7 @@
     components: {
       demo: require('@/pages/components/demo.vue'),
       demoItem: require('@/pages/components/demo-item.vue'),
-      Icon: require('@/components/Icon')
+      Icon: require('@/components/Icon/Icon.vue')
     }
   }
 </script>
