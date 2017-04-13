@@ -1,18 +1,18 @@
 <template>
   <button :class="component_class">
-    <Icon v-if="is_loading" :size="size" name="loading" :rotate="true"></Icon>
-    <Icon v-if="!is_loading && prefix" :size="size" :name="prefix"></Icon>
+    <Icon v-if="is_loading" name="loading" :rotate="true"></Icon>
+    <Icon v-if="!is_loading && prefix" :name="prefix"></Icon>
     <span v-if="loading_text">
       {{ loading_text }}
     </span>
     <span v-else>
       <slot></slot>
     </span>
-    <Icon v-if="!is_loading && suffix" :size="size" :name="suffix"></Icon>
+    <Icon v-if="!is_loading && suffix" :name="suffix"></Icon>
   </button>
 </template>
 
-<style lang="stylus" scope>
+<style lang="stylus">
   @import './style/';
 </style>
 
@@ -23,8 +23,16 @@
       Icon: require('@/components/Icon/Icon.vue')
     },
     props: {
-      size: {
+      type: {
+        default: 'primary',
+        type: String
+      },
+      theme: {
         default: '',
+        type: String
+      },
+      size: {
+        default: 'md',
         type: String
       },
       disabled: {
@@ -48,6 +56,8 @@
       component_class: function () {
         return [
           'hiui-btn',
+          `hiui-btn-${this.type}`,
+          `hiui-btn-${this.theme}`,
           {
             [`hiui-btn-${this.size}`]: this.size,
             'disabled': this.disabled

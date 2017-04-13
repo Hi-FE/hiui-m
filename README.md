@@ -17,6 +17,9 @@ npm run build
 # build for components with minification
 npm run package
 
+# Add Component
+npm run add ComponentName
+
 # build for production and view the bundle analyzer report
 npm run build --report
 ```

@@ -9,6 +9,7 @@
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "package": "node build/package.js",
+    "add": "node add-component/",
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {

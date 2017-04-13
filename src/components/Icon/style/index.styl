@@ -1,22 +1,17 @@
 @import '../../style/';
 
+_default_size = 24px;
+
 .hiui-icon { 
   position: relative;
   display: inline-block;
-  vertical-align: text-top;
-  width: _icon_md;
-  height: _icon_md;
+  vertical-align: top;
+  width: _default_size;
+  height: _default_size;
   overflow: hidden;
   
   svg {
     display: block;
-  }
-}
-
-for size in _size {
-  .hiui-icon-{size} {
-    width: _icon_ + size;
-    height: _icon_ + size;
   }
 }
 
