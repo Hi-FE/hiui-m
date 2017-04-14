@@ -44,6 +44,13 @@ export default new Router({
           default: require('@/components/Icon/index.md'),
           preview: require('@/pages/demo/Icon.vue')
         }
+      }, {
+        path: '/Components/Bar',
+        name: 'Bar',
+        components: {
+          default: require('@/components/Bar/index.md'),
+          preview: require('@/pages/demo/Bar.vue')
+        }
       }]
     }
   ]

@@ -24,6 +24,10 @@
         "name": "Icon",
         "cn_name": "图标",
         "path": "/Icon"
+      }, {
+        "name": "Bar",
+        "cn_name": "栏",
+        "path": "/Bar"
       }]
     }]
   }]

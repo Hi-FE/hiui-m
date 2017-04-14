@@ -10,9 +10,7 @@
       <slot></slot>
     </div>
     <transition name="slide">
-      <div v-show="show_code" class="demo-code">
-        <pre><code ref="code" :class="lang">{{ code.trim() }}</code></pre>
-      </div>
+      <v-code v-show="show_code" :lang="lang" :code="code"></v-code>
     </transition>
   </div>
 </template>
@@ -28,13 +26,6 @@
     background-color: _white;
     border-radius: 4px;
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, .16);
-    
-    code {
-      padding-left: 10px;
-      font-size: 13px;
-      border-radius: 4px;
-      background-color: #f6f8fa;
-    }
   }
   
   .demo-item-container {
@@ -71,10 +62,11 @@
 </style>
 
 <script>
-  import hljs from 'highlight.js'
-
   export default {
     name: 'demo-item',
+    components: {
+      vCode: require('./v-code')
+    },
     props: {
       lang: {
         default: 'html',
@@ -88,9 +80,6 @@
       return {
         show_code: false
       }
-    },
-    mounted () {
-      hljs.highlightBlock(this.$refs.code)
     }
   }
 </script>

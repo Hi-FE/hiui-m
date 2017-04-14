@@ -1,0 +1,29 @@
+@import '../../style/';
+
+.hiui-bar {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 2px rgba(0, 0, 0, .36);
+
+  &.hiui-bar-center {
+    justify-content: center;
+  }
+    
+  &.hiui-bar-middle {
+    align-items: center;
+  }
+}
+
+for size in _size {
+  _bar_outer_size = _size_o_ + size;
+  _bar_inner_size = _size_ + size;
+  
+  .hiui-bar-{size} {
+    height: _bar_outer_size;
+    
+    &.hiui-bar-padding {
+      padding: ((_bar_outer_size - _bar_inner_size) / 2);
+    }
+  }
+}

@@ -1,6 +1,6 @@
 var fs = require('fs')
 var path = require('path')
-var generateComponent = require('./utils')
+var generateComponent = require('./generateComponent')
 
 //  获取命令行得到的组件名
 const component_name = process.argv[2]
@@ -30,11 +30,7 @@ const template_path = path.normalize(path.join(__dirname, './template/'))
 const target_path = path.normalize(path.join(__dirname, '../src/components/'))
 const component_path = path.join(target_path, component_name)
 
-/*
- * Add Template
- */
-
-//  判断组件是否已存在
+//  生成模板组件
 generateComponent(template_path, component_path, rule)
 
 

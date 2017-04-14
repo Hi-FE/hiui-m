@@ -4,8 +4,8 @@ var path = require('path')
 //  打印错误
 const logError = (err) => {
  console.log()
- console.error('Error: ')
  console.error(err) 
+ console.log()
 }
 
 //  根据模板生成组件 @parames [模板路径， 组件路径, 替换规则]
