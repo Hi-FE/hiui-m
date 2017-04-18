@@ -1,7 +1,9 @@
 <template>
   <div class="demo-wrap">
     <h2 class="title">{{ title }}</h2>
-    <slot></slot>
+    <div class="demo-container">
+      <slot></slot>
+    </div>
   </div>
 </template>
 
@@ -9,15 +11,30 @@
   @import '../../style/index.styl'; 
   
   .demo-wrap {
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     
     .title {
+      position: absolute;
+      top: 1;
+      left: 1;
       height: 50px;
+      width: 100%;
       line-height: 50px;
-      background-color: _black;
+      background-color: _blue;
       color: _white;
       text-align: center;
+    }
+    
+    .demo-container {
+      position: absolute;
+      top: 50px;
+      left: 0;
+      overflow: auto;
+      width: 100%;
+      height: calc(100% - 50px);
     }
   }
 </style>

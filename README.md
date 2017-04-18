@@ -20,6 +20,9 @@ npm run package
 # Add Component
 npm run add ComponentName
 
+# Add Method Component (e.g: Toast Message)
+npm run add ComponentName method
+
 # build for production and view the bundle analyzer report
 npm run build --report
 ```

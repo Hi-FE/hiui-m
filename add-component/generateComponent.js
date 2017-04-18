@@ -55,21 +55,27 @@ const readTemplate = (_path, _targetPath, rule) => {
       var isDirectory = stat.isDirectory()
       //  判断是否为文件夹
       if (isDirectory) {
+        //  如果是文件夹，则复制文件夹并递归调用readTemplate
         mkDir(targetPath, () => {
           readTemplate(filePath, targetPath, rule)
         })
       }
       else {
+        //  根据规则替换文件名
         var file_name = replaceTemplate(file, rule)
+
+        //  根据规则替换文件内容
         var data = readFile(filePath)
         data = replaceTemplate(data, rule)
+
+        //  写文件
         writeFile(_targetPath, file_name, data)
       }
     })
   })
 }
 
-//  模板替换
+//  模板替换 @params [替换模板， 替换规则]
 const replaceTemplate = (str, obj) => {
   Object.keys(obj).forEach((key) => {
     const reg = new RegExp(`{{${key}}}`, 'g')

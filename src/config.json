@@ -29,6 +29,13 @@
         "cn_name": "栏",
         "path": "/Bar"
       }]
+    }, {
+      "title": "Data out",
+      "components": [{
+        "name": "Toast",
+        "cn_name": "提示",
+        "path": "/Toast"
+      }]
     }]
   }]
 }

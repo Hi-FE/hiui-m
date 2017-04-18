@@ -48,8 +48,7 @@
     },
     components: {
       demo: require('@/pages/components/demo.vue'),
-      demoItem: require('@/pages/components/demo-item.vue'),
-      Icon: require('@/components/Icon/Icon.vue')
+      demoItem: require('@/pages/components/demo-item.vue')
     }
   }
 </script>

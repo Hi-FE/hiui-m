@@ -1,18 +1,25 @@
 <template>
   <demo title="Icon" class="bar-demo">
     <div class="demo-main">
-      <!-- 顶部Bar -->
-      <Bar class="fix-top" size="lg" :is_middle="true" :is_center="true">
+      <!-- Size: true -->
+      <Bar class="flex-center" size="lg">
         <h3>Bar</h3>
       </Bar>
-    
-      <!-- 底部Bar -->
-      <Bar class="fix-bottom" :use_padding="true">
-        <Btn>Cancel</Btn>
-        <Btn theme="blue" type="solid">Next</Btn>
-      </Bar>
-
       <v-code :code="code"></v-code>
+
+      <!-- use_padding: false -->
+      <Bar class="bar">
+        <Btn>Button</Btn>
+      </Bar>
+      <v-code :code="no_padding_code"></v-code>
+      
+      <!-- use_padding: true -->
+      <Bar class="bar" :use_padding="true">
+        <Btn>Button</Btn>
+        <Btn>Button</Btn>
+        <Btn>Button</Btn>
+      </Bar>
+      <v-code :code="have_padding_code"></v-code>
     </div>
   </demo>
 </template>
@@ -21,8 +28,6 @@
   @import '../../style/';
   
   .bar-demo .demo-main {
-    height: calc(667px - 50px);
-    padding: _size_o_lg 0 _size_o_md 0;
     position: relative;
     
     code {
@@ -30,15 +35,14 @@
     }
   }
   
-  .fix-top {
-    position: absolute;
-    top: 0;
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   
-  .fix-bottom {
-    position: absolute;
-    bottom: 0;
-    justify-content: space-between;
+  .bar {
+    margin: 10px 0;
   }
 </style>
 
@@ -47,15 +51,31 @@
     data () {
       return {
         code: `
-<!-- 顶部Bar -->
-<Bar class="fix-top" size="lg" :is_middle="true" :is_center="true">
+<!-- Size: true -->
+<Bar class="flex-center" size="lg">
   <h3>Bar</h3>
 </Bar>
 
-<!-- 底部Bar -->
-<Bar class="fix-bottom" :use_padding="true">
-  <Btn>Cancel</Btn>
-  <Btn theme="blue" type="solid">Next</Btn>
+<style>
+  .flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+</style>
+        `,
+        no_padding_code: `
+<!-- use_padding: false -->
+<Bar class="bar">
+  <Btn>Button</Btn>
+</Bar>
+        `,
+        have_padding_code: `
+<!-- use_padding: true -->
+<Bar class="bar" :use_padding="true">
+  <Btn>Button</Btn>
+  <Btn>Button</Btn>
+  <Btn>Button</Btn>
 </Bar>
         `
       }
@@ -63,9 +83,7 @@
     components: {
       demo: require('@/pages/components/demo'),
       demoItem: require('@/pages/components/demo-item'),
-      vCode: require('@/pages/components/v-code'),
-      Btn: require('@/components/Btn/Btn'),
-      Bar: require('@/components/Bar/Bar')
+      vCode: require('@/pages/components/v-code')
     }
   }
 </script>

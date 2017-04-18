@@ -7,50 +7,64 @@ export default new Router({
   mode: process.env.NODE_ENV === 'production' ? 'hash' : 'history',
   routes: [
     {
+      path: '/Btn',
+      name: 'Preview-Btn',
+      component: require('@/pages/demo/Btn.vue')
+    }, {
+      path: '/Icon',
+      name: 'Preview-Icon',
+      component: require('@/pages/demo/Icon.vue')
+    }, {
+      path: '/Bar',
+      name: 'Preview-Bar',
+      component: require('@/pages/demo/Bar.vue')
+    }, {
+      path: '/Toast',
+      name: 'Preview-Toast',
+      component: require('@/pages/demo/Toast.vue')
+    }, {
       path: '/',
       component: require('@/pages/layout'),
       children: [{
         path: '/',
         name: 'Overview',
-        meta: {
-          noPreview: true
-        },
         component: require('@/pages/views/index.md')
       }, {
         path: '/Standard',
         name: 'Standard',
-        meta: {
-          noPreview: true
-        },
         component: require('@/pages/views/standard.md')
       }, {
         path: '/Components',
         name: 'Components',
-        meta: {
-          noPreview: true
-        },
         component: require('@/pages/views/components.md')
       }, {
         path: '/Components/Btn',
         name: 'Btn',
-        components: {
-          default: require('@/components/Btn/index.md'),
-          preview: require('@/pages/demo/Btn.vue')
-        }
+        meta: {
+          preview: '/Btn'
+        },
+        component: require('@/components/Btn/index.md')
       }, {
         path: '/Components/Icon',
         name: 'Icon',
-        components: {
-          default: require('@/components/Icon/index.md'),
-          preview: require('@/pages/demo/Icon.vue')
-        }
+        meta: {
+          preview: '/Icon'
+        },
+        component: require('@/components/Icon/index.md')
       }, {
         path: '/Components/Bar',
         name: 'Bar',
-        components: {
-          default: require('@/components/Bar/index.md'),
-          preview: require('@/pages/demo/Bar.vue')
-        }
+        meta: {
+          preview: '/Bar'
+        },
+        component: require('@/components/Bar/index.md')
+      }, {
+        path: '/Components/Toast',
+        name: 'Toast',
+        meta: {
+          preview: '/Toast'
+        },
+        component: require('@/components/Toast/index.md')
       }]
     }
   ]

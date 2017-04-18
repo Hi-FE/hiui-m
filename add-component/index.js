@@ -4,12 +4,15 @@ var generateComponent = require('./generateComponent')
 
 //  获取命令行得到的组件名
 const component_name = process.argv[2]
+const isFunction = process.argv[3] === 'method'
 
 //  判断是否有输入组件名
 if (!component_name) {
   console.log()
   console.log('命令有误，请按照如下格式输入:')
-  console.log('npm run add ComponentName')
+  console.log('npm run add Button')
+  console.log('or')
+  console.log('npm run add Message method')
   console.log()
   return false
 }
@@ -24,7 +27,7 @@ const rule = {
 }
 
 //  模板路径
-const template_path = path.normalize(path.join(__dirname, './template/'))
+const template_path = path.normalize(path.join(__dirname, isFunction ? './method-template/' : './template/'))
 
 //  目标位置
 const target_path = path.normalize(path.join(__dirname, '../src/components/'))

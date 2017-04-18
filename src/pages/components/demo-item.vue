@@ -16,26 +16,28 @@
 </template>
 
 <style lang="stylus" scope>
-  @import '../../style/index.styl'; 
+  @import '../../style/index.styl';
+  
+  _demo_gap = 5px;
   
   .demo-item {
     display: flex;
     flex-direction: column;
     margin: 10px;
-    padding: 10px;
+    padding: _demo_gap;
     background-color: _white;
     border-radius: 4px;
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, .16);
   }
   
   .demo-item-container {
-    padding: 10px;
+    padding: 10px _demo_gap;
   }
   
   .demo-item-title {
     height: 30px;
     line-height: 30px;
-    padding: 0 10px;
+    padding: 0 _demo_gap;
     
     small {
       margin-left: 5px;

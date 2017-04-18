@@ -3,9 +3,10 @@
 import Vue from 'vue'
 import App from './App'
 import router from './_router'
+import components from './components'
 
 import 'github-markdown-css'
-
+Vue.use(components)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

@@ -23,14 +23,6 @@
       Icon: require('@/components/Icon/Icon.vue')
     },
     props: {
-      type: {
-        default: 'primary',
-        type: String
-      },
-      theme: {
-        default: '',
-        type: String
-      },
       size: {
         default: 'md',
         type: String
@@ -56,8 +48,6 @@
       component_class: function () {
         return [
           'hiui-btn',
-          `hiui-btn-${this.type}`,
-          `hiui-btn-${this.theme}`,
           {
             [`hiui-btn-${this.size}`]: this.size,
             'disabled': this.disabled

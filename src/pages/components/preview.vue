@@ -9,12 +9,18 @@
   
   .preview-wrap {
     position: fixed;
-    top: 100px;
-    right: 20px;
+    top: 10px;
+    right: 30px;
     border-radius: 4px;
     background-color: _grey_lighter;
     box-shadow: 0 0 5px 3px rgba(0, 0, 0, .26);
     overflow-x: hidden;
+  }
+  
+  @media screen and (min-height: 800px) {
+    .preview-wrap {
+      top: 80px;  
+    }
   }
 </style>
 
