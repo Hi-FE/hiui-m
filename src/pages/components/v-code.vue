@@ -18,7 +18,7 @@
   import hljs from 'highlight.js'
 
   export default {
-    name: 'code',
+    name: 'v-code',
     props: ['code', 'lang'],
     mounted () {
       hljs.highlightBlock(this.$refs.code)

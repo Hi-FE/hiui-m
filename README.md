@@ -18,10 +18,10 @@ npm run build
 npm run package
 
 # Add Component
-npm run add ComponentName
+node add ComponentName --cn 组件中文名 --type [base, data-in, data-out]
 
 # Add Method Component (e.g: Toast Message)
-npm run add ComponentName method
+node add ComponentName method --cn 组件中文名 --type [base, data-in, data-out]
 
 # build for production and view the bundle analyzer report
 npm run build --report

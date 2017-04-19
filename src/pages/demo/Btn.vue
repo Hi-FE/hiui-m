@@ -52,10 +52,6 @@
 <Btn suffix="search">search</Btn>
         `
       }
-    },
-    components: {
-      demo: require('@/pages/components/demo.vue'),
-      demoItem: require('@/pages/components/demo-item.vue')
     }
   }
 </script>

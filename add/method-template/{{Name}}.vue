@@ -10,7 +10,7 @@
 
 <script>
   export default {
-    name: '{{Name}}',
+    name: '{{cname}}',
     props: {
     },
     data () {

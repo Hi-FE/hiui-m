@@ -45,10 +45,6 @@
 <Icon :rotate="true" name="refresh"></Icon>
         `
       }
-    },
-    components: {
-      demo: require('@/pages/components/demo.vue'),
-      demoItem: require('@/pages/components/demo-item.vue')
     }
   }
 </script>

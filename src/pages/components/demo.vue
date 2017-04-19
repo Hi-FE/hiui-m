@@ -11,25 +11,25 @@
   @import '../../style/index.styl'; 
   
   .demo-wrap {
+    position: relative;
     width: 100%;
     height: 100%;
-    display: flex;
-    flex-direction: column;
     
     .title {
-      position: absolute;
-      top: 1;
-      left: 1;
+      position: fixed;
+      top: 0;
+      left: 0;
       height: 50px;
       width: 100%;
       line-height: 50px;
       background-color: _blue;
       color: _white;
       text-align: center;
+      z-index: 9;
     }
     
     .demo-container {
-      position: absolute;
+      position: relative;
       top: 50px;
       left: 0;
       overflow: auto;

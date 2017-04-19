@@ -1,16 +1,24 @@
-// Base
+/* base */
+import Spinner from './Spinner'
 import Btn from './Btn'
 import Icon from './Icon'
 import Bar from './Bar'
 
-// Data out
+/* data-in */
+import Switch from './Switch'
+
+/* data-out */
 import Toast from './Toast'
 
 const install = (Vue) => {
+  /* component */
+  Vue.component(Spinner.name, Spinner)
   Vue.component(Btn.name, Btn)
   Vue.component(Icon.name, Icon)
   Vue.component(Bar.name, Bar)
+  Vue.component(Switch.name, Switch)
 
+  /* method */
   Vue.use(Toast)
 }
 
@@ -19,9 +27,12 @@ if (typeof window !== 'undefined' && window.Vue) {
 }
 
 export default {
-  install,
+  /* export */
+  Spinner,
   Btn,
   Icon,
   Bar,
-  Toast
+  Toast,
+  Switch,
+  install
 }

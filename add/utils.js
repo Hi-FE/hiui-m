@@ -10,18 +10,19 @@ const logError = (err) => {
 
 //  根据模板生成组件 @parames [模板路径， 组件路径, 替换规则]
 const generateComponent = (template_path, component_path, rule) => {
-  fs.exists(component_path, (exists) => {
-    if (exists) {
-      logError('组件已存在')
-      return false
-    }
-    else {
-      //  生成组件文件夹
-      mkDir(component_path, () => {
-        //  复制模板
-        readTemplate(template_path, component_path, rule)
-      })
-    }
+  //  生成组件文件夹
+  mkDir(component_path, () => {
+    //  复制模板
+    readTemplate(template_path, component_path, rule)
+  })
+}
+
+//  修改文件
+const modifyFile = (files, modify_rule, rule) => {
+  Array.from(files, obj => {
+    var str = readFile(obj.file)
+    var data = str.replace(obj.template, replaceTemplate(obj.content, rule))
+    writeFile(obj.file, data)
   })
 }
 
@@ -69,7 +70,7 @@ const readTemplate = (_path, _targetPath, rule) => {
         data = replaceTemplate(data, rule)
 
         //  写文件
-        writeFile(_targetPath, file_name, data)
+        writeFile(path.join(_targetPath, file_name), data)
       }
     })
   })
@@ -84,18 +85,32 @@ const replaceTemplate = (str, obj) => {
   return str
 }
 
+//  替换文件
+const replaceFile = (_path, _target, rule) => {  
+  //  根据规则替换文件内容
+  var data = readFile(_path)
+  data = replaceTemplate(data, rule)
+  
+  //  根据规则替换文件名
+  var file_name = path.basename(_path)
+  file_name = replaceTemplate(file_name, rule)
+
+  //  写文件
+  writeFile(path.join(_target, file_name), data)
+}
+
 //  读文件
 const readFile = (_path) => { 
   return fs.readFileSync(_path, { flag: 'r+', encoding: 'utf8' })
 }
 
 //  写文件
-const writeFile = (_path, _name, data) => {
-  fs.writeFile(path.join(_path, _name), data, (err) => {
-    if (err) {
-      return logError(err)
-    }
-  })
+const writeFile = (_path, data) => {
+  return fs.writeFileSync(_path, data, 'utf-8')
 }
 
-module.exports = generateComponent
+module.exports = {
+  replaceFile,
+  generateComponent,
+  modifyFile
+}

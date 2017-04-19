@@ -18,12 +18,6 @@
 this.$toast('Default Toast')
         `
       }
-    },
-    components: {
-      demo: require('@/pages/components/demo.vue'),
-      demoItem: require('@/pages/components/demo-item.vue')
-    },
-    methods: {
     }
   }
 </script>

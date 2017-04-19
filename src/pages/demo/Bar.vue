@@ -1,11 +1,17 @@
 <template>
   <demo title="Icon" class="bar-demo">
     <div class="demo-main">
-      <!-- Size: true -->
-      <Bar class="flex-center" size="lg">
+      <!-- 标题Bar -->
+      <Bar class="top-bar">
         <h3>Bar</h3>
       </Bar>
+
+      <!-- 固定底部按钮 -->
+      <Bar class="fix-bottom-bar" size="lg">
+        <Btn>验证并支付</Btn>
+      </Bar>
       <v-code :code="code"></v-code>
+      <v-code :code="style_code" lang="css"></v-code>
 
       <!-- use_padding: false -->
       <Bar class="bar">
@@ -29,20 +35,38 @@
   
   .bar-demo .demo-main {
     position: relative;
+    padding-bottom: _size_o_lg;
     
     code {
       margin: 10px;
     }
   }
   
-  .flex-center {
+  .bar {
+    margin: 10px 0;
+  }
+  
+  .top-bar {
     display: flex;
     justify-content: center;
     align-items: center;
+    z-index: 10;
   }
   
-  .bar {
-    margin: 10px 0;
+  .fix-bottom-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    
+    button {
+      width: 100%;
+      height: 100%;
+      border: none;
+      border-radius: 0;
+      background-color: _red;
+      color: #fff;
+    }
   }
 </style>
 
@@ -51,18 +75,38 @@
     data () {
       return {
         code: `
-<!-- Size: true -->
-<Bar class="flex-center" size="lg">
+<!-- 标题Bar -->
+<Bar class="top-bar">
   <h3>Bar</h3>
 </Bar>
 
-<style>
-  .flex-center {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+<!-- 固定底部按钮 -->
+<Bar class="fix-bottom-bar" size="lg">
+  <Btn>验证并支付</Btn>
+</Bar>
+        `,
+        style_code: `
+.top-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.fix-bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  
+  button {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    background-color: _red;
+    color: #fff;
   }
-</style>
+}
         `,
         no_padding_code: `
 <!-- use_padding: false -->
@@ -79,11 +123,6 @@
 </Bar>
         `
       }
-    },
-    components: {
-      demo: require('@/pages/components/demo'),
-      demoItem: require('@/pages/components/demo-item'),
-      vCode: require('@/pages/components/v-code')
     }
   }
 </script>
