@@ -41,28 +41,28 @@ export default new Router({
         path: '/Components/Btn',
         name: 'Btn',
         meta: {
-          preview: '/#/Btn'
+          preview: './#/Btn'
         },
         component: require('@/components/Btn/index.md')
       }, {
         path: '/Components/Icon',
         name: 'Icon',
         meta: {
-          preview: '/#/Icon'
+          preview: './#/Icon'
         },
         component: require('@/components/Icon/index.md')
       }, {
         path: '/Components/Bar',
         name: 'Bar',
         meta: {
-          preview: '/#/Bar'
+          preview: './#/Bar'
         },
         component: require('@/components/Bar/index.md')
       }, {
         path: '/Components/Toast',
         name: 'Toast',
         meta: {
-          preview: '/#/Toast'
+          preview: './#/Toast'
         },
         component: require('@/components/Toast/index.md')
       }]
