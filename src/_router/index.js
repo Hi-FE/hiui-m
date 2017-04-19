@@ -4,7 +4,7 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 export default new Router({
-  mode: process.env.NODE_ENV === 'production' ? 'hash' : 'history',
+  mode: 'hash',
   routes: [
     {
       path: '/Btn',
@@ -41,28 +41,28 @@ export default new Router({
         path: '/Components/Btn',
         name: 'Btn',
         meta: {
-          preview: '/Btn'
+          preview: '/#/Btn'
         },
         component: require('@/components/Btn/index.md')
       }, {
         path: '/Components/Icon',
         name: 'Icon',
         meta: {
-          preview: '/Icon'
+          preview: '/#/Icon'
         },
         component: require('@/components/Icon/index.md')
       }, {
         path: '/Components/Bar',
         name: 'Bar',
         meta: {
-          preview: '/Bar'
+          preview: '/#/Bar'
         },
         component: require('@/components/Bar/index.md')
       }, {
         path: '/Components/Toast',
         name: 'Toast',
         meta: {
-          preview: '/Toast'
+          preview: '/#/Toast'
         },
         component: require('@/components/Toast/index.md')
       }]
