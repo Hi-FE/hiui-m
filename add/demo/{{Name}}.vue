@@ -1,10 +1,14 @@
 <template>
   <demo title="{{Name}}" class="{{name}}-demo">
-    <{{cname}}></{{cname}}>
+    <demo-item name="Default" description="默认" :code="code">
+      <{{cname}}></{{cname}}>
+    </demo-item>
   </demo>
 </template>
 
 <style lang="stylus" scope>
+  @import '../../style/';
+  
   .{{name}}-demo {
   }
 </style>
@@ -13,6 +17,9 @@
   export default {
     data () {
       return {
+        code: `
+<{{cname}}></{{cname}}>
+        `
       }
     }
   }
