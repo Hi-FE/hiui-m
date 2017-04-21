@@ -16,21 +16,21 @@
 
 <style lang="stylus" scope>
   @import '../../style/';
-  
+
   .switch-demo {
-    
+
     .demo-item-container {
       display: flex;
-      align-items: center;     
+      align-items: center;
     }
     .hiui-switch {
       margin-right: 10px;
     }
-    
+
     .green {
       background-color: _red;
     }
-    
+
     .green.checked {
       background-color: _green;
     }

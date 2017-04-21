@@ -1,21 +1,13 @@
 <template>
-  <i :class="component_class" :style="size_style">
-    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
-         viewBox="0 0 1024 1024"
-         width="100%"
-         height="100%">
-      <path :fill="color" :d="icons[name]"></path>
-    </svg>
-  </i>
+  <i :class="component_class" :style="size_style"></i>
 </template>
 
 <style lang="stylus">
+  @import '//at.alicdn.com/t/font_oqi318f7xmj3v7vi.css';
   @import './style/';
 </style>
 
 <script>
-  import data from './svg'
-
   export default {
     name: 'Icon',
     props: {
@@ -25,7 +17,7 @@
         required: true
       },
       color: {
-        default: '#666',
+        default: '',
         type: String
       },
       rotate: {
@@ -35,23 +27,24 @@
     },
     data () {
       return {
-        icons: data
       }
     },
     computed: {
       component_class () {
         return [
+          'iconfont',
           'hiui-icon',
+          `icon-${this.name}`,
           {
             'hiui-icon-rotate': this.rotate
           }
         ]
       },
       size_style () {
-        return typeof this.size !== 'undefined' ? {
-          width: `${this.size}px`,
-          height: `${this.size}px`
-        } : null
+        return {
+          fontSize: this.size ? `${this.size}px` : '',
+          color: this.color || ''
+        }
       }
     }
   };

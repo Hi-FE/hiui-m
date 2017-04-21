@@ -8,13 +8,13 @@
 </template>
 
 <style lang="stylus" scope>
-  @import '../../style/index.styl'; 
-  
+  @import '../../style/index.styl';
+
   .demo-wrap {
     position: relative;
     width: 100%;
     height: 100%;
-    
+
     .title {
       position: fixed;
       top: 0;
@@ -27,7 +27,7 @@
       text-align: center;
       z-index: 9;
     }
-    
+
     .demo-container {
       position: relative;
       top: 50px;

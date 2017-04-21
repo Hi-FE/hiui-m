@@ -4,9 +4,11 @@
 
 ## API
 
-`this.$toast(content, time, callback)`
+```js
+this.$toast(content, time, callback)
+```
 
-## Params
+## Paramsl
 
 | 参数 | 说明 | 类型 | 默认值 |
 | ----|:-----| ---- | ---- |

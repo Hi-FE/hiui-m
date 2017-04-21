@@ -5,8 +5,8 @@
 </template>
 
 <style lang="stylus" scope>
-  @import '../../style/'; 
-  
+  @import '../../style/';
+
   .preview-wrap {
     position: fixed;
     top: 10px;
@@ -16,10 +16,10 @@
     box-shadow: 0 0 5px 3px rgba(0, 0, 0, .26);
     overflow: hidden;
   }
-  
+
   @media screen and (min-height: 800px) {
     .preview-wrap {
-      top: 80px;  
+      top: 80px;
     }
   }
 </style>

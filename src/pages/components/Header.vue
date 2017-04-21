@@ -13,19 +13,19 @@
 </template>
 
 <style lang="stylus" scope>
-  @import '../../style/'; 
+  @import '../../style/';
 
   _height = 60px;
   _font_color = _white;
   _bg_color =  _black;
-  
+
   .header {
     height: _height;
     line-height: _height;
     color: _font_color;
     background-color: _bg_color;
     overflow: hidden;
-    
+
     .logo {
       float: left;
       padding: 0 20px;
@@ -36,7 +36,7 @@
         letter-spacing: 1.3px;
       }
     }
-    
+
     .menu {
       float: right;
       list-style: none;

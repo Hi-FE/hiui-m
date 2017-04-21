@@ -17,9 +17,9 @@
 
 <style lang="stylus" scope>
   @import '../../style/index.styl';
-  
+
   _demo_gap = 5px;
-  
+
   .demo-item {
     display: flex;
     flex-direction: column;
@@ -29,22 +29,22 @@
     border-radius: 4px;
     box-shadow: 0 0 1px 1px rgba(0, 0, 0, .16);
   }
-  
+
   .demo-item-container {
     padding: 10px _demo_gap;
   }
-  
+
   .demo-item-title {
     height: 30px;
     line-height: 30px;
     padding: 0 _demo_gap;
-    
+
     small {
       margin-left: 5px;
       font-size: 12px;
       color: #999;
     }
-    
+
     .show-code-btn {
       float: right;
       font-size: 12px;
@@ -52,7 +52,7 @@
       cursor: pointer;
     }
   }
-  
+
   .slide-enter-active, .slide-leave-active {
     max-height: 300px;
     overflow: hidden;

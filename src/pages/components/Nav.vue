@@ -20,11 +20,11 @@
 
 <style lang="stylus" scope>
   @import '../../style/';
-  
+
   .nav {
     width: 100%;
     padding: 20px;
-    
+
     .nav-li {
       small {
         font-size: 12px;
@@ -32,19 +32,19 @@
         opacity: .85;
       }
     }
-    
+
     .nav-child-wrap {
       margin-left: 30px;
-      
+
       .nav-child {
         padding: 8px 15px;
-        
+
         &:hover {
           color: _blue_deep;
           cursor: po
         }
       }
-      
+
       .nav-child-title {
         font-size: 14px;
         color: #999;
@@ -52,13 +52,13 @@
       }
     }
   }
-  
-.link-li {  
+
+.link-li {
   position: relative;
   font-size: 16px;
   color: _grey_deeper;
   padding: 12px 10px;
-      
+
   &:hover {
     color: _blue_deep;
   }
@@ -66,7 +66,7 @@
   &.router-link-active {
     color: _blue;
     cursor: default;
-    
+
     &::before {
       content: '';
       position: absolute;
@@ -81,12 +81,12 @@
       border-left-color: _blue;
     }
   }
-  
+
   &:not(.router-link-active) {
     cursor: pointer;
   }
 }
-  
+
 </style>
 
 <script>

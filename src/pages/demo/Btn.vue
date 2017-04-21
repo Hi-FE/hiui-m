@@ -5,29 +5,29 @@
       <div class="btn-group">
         <Btn size="sm">Size sm</Btn>
         <Btn size="md">Size md</Btn>
-        <Btn size="lg">Size lg</Btn>  
-      </div> 
+        <Btn size="lg">Size lg</Btn>
+      </div>
     </demo-item>
 
-    <!-- Prop: disabled is_loading --> 
+    <!-- Prop: disabled is_loading -->
     <demo-item name="Status" description="按钮状态" :code="status_code">
       <div class="btn-group">
         <Btn :disabled="true">Disabled</Btn>
         <Btn :is_loading="true" loading_text="Loading..">Btn</Btn>
-      </div> 
+      </div>
     </demo-item>
 
-    <!-- Prop: prefix suffix --> 
+    <!-- Prop: prefix suffix -->
     <demo-item name="Icon" description="更多图标" :code="icon_code">
       <div class="btn-group">
         <Btn prefix="search">search</Btn>
         <Btn suffix="search">search</Btn>
-      </div> 
+      </div>
     </demo-item>
   </demo>
 </template>
 
-<style lang="stylus" scope>  
+<style lang="stylus" scope>
   .btn-group > button {
     margin: 2px 2px 2px 0;
     vertical-align: bottom;

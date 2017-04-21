@@ -12,14 +12,14 @@ for size in _size {
 
     width: _w;
     height: _h;
-    
-    &::after { 
+
+    &::after {
       width: _dot;
       height: _dot;
       left: _gap;
       top: _gap;
     }
-    
+
     &.checked::after {
       transform: translateX(_w - _dot - _gap * 2);
     }
@@ -32,7 +32,7 @@ for size in _size {
   border-radius: 40px;
   background-color: _default;
   transition: background-color .3s;
-  
+
   &::after {
     content: '';
     border-radius: 50%;
@@ -41,7 +41,7 @@ for size in _size {
     transition: transform .3s;
     z-index: 1;
   }
-  
+
   &.checked {
     background-color: _active;
   }
