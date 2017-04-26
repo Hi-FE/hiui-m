@@ -1,5 +1,5 @@
 <template>
-  <demo title="Icon" class="bar-demo">
+  <demo title="Bar" class="bar-demo">
     <div class="demo-main">
       <!-- 标题Bar -->
       <Bar class="top-bar">

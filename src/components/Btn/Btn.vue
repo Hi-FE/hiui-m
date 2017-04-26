@@ -17,6 +17,8 @@
 </style>
 
 <script>
+  const prefixCls = 'hiui-btn'
+
   export default {
     name: 'Btn',
     components: {
@@ -39,17 +41,12 @@
       prefix: String,
       suffix: String
     },
-    data () {
-      return {
-        msg: 'button'
-      }
-    },
     computed: {
-      component_class: function () {
+      component_class () {
         return [
-          'hiui-btn',
+          prefixCls,
           {
-            [`hiui-btn-${this.size}`]: this.size,
+            [`${prefixCls}-${this.size}`]: this.size,
             'disabled': this.disabled
           }
         ]

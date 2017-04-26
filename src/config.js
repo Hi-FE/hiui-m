@@ -1,7 +1,9 @@
 export default {
   name: 'Hiui-M',
   version: 'v1.0.0',
-  github: 'https://github.com/Hi-FE/hiui-m',
+  links: {
+    github: 'https://github.com/Hi-FE/hiui-m'
+  },
   nav: [{
     name: 'Overview',
     cn_name: '概述',

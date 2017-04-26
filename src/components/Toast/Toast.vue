@@ -11,6 +11,8 @@
 </style>
 
 <script>
+  const prefixCls = 'hiui-toast'
+
   export default {
     name: 'Toast',
     data () {
@@ -22,9 +24,9 @@
       }
     },
     computed: {
-      component_class: function () {
+      component_class () {
         return [
-          'hiui-toast'
+          prefixCls
         ]
       }
     },

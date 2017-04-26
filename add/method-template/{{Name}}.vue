@@ -9,6 +9,8 @@
 </style>
 
 <script>
+  const prefixCls = 'hiui-{{name}}'
+
   export default {
     name: '{{cname}}',
     props: {
@@ -18,9 +20,9 @@
       }
     },
     computed: {
-      component_class: function () {
+      component_class () {
         return [
-          'hiui-{{name}}'
+          prefixCls
         ]
       }
     }

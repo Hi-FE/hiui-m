@@ -2,8 +2,7 @@
   "name": "hiui-m",
   "version": "1.0.0",
   "description": "UI components for m.wantu.cn",
-  "author": "不一 <buuyii@hitour.cc>",
-  "private": true,
+  "homepage": "https://hi-fe.github.io/hiui-m/",
   "main": "./dist/hiuim.js",
   "scripts": {
     "dev": "node build/dev-server.js",

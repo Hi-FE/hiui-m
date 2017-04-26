@@ -5,8 +5,8 @@
       <small>{{ config.version }}</small>
     </h3>
     <ul class="menu">
-      <li>
-        <a :href="config.github">Github</a>
+      <li v-for="(val, key) in config.links">
+        <a :href="val">{{ key }}</a>
       </li>
     </ul>
   </header>
@@ -25,10 +25,11 @@
     color: _font_color;
     background-color: _bg_color;
     overflow: hidden;
+    border-bottom: 1px solid _grey;
 
     .logo {
       float: left;
-      padding: 0 20px;
+      padding: 0 40px;
 
       small {
         font-size: 12px;
@@ -43,7 +44,7 @@
       margin-right: 40px;
 
       a {
-        color: _white;
+        color: _font_color;
       }
     }
   }

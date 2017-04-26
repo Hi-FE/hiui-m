@@ -9,6 +9,8 @@
 </style>
 
 <script>
+  const prefixCls = 'hiui-switch'
+
   export default {
     name: 'vSwitch',
     props: {
@@ -22,10 +24,10 @@
       }
     },
     computed: {
-      component_class: function () {
+      component_class () {
         return [
-          'hiui-switch',
-          `hiui-switch-${this.size}`,
+          prefixCls,
+          `${prefixCls}-${this.size}`,
           {
             'checked': this.value
           }

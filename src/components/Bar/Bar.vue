@@ -9,6 +9,8 @@
 </style>
 
 <script>
+  const prefixCls = 'hiui-bar'
+
   export default {
     name: 'Bar',
     props: {
@@ -34,14 +36,14 @@
       }
     },
     computed: {
-      component_class: function () {
+      component_class () {
         return [
-          'hiui-bar',
-          `hiui-bar-${this.size}`,
+          prefixCls,
+          `${prefixCls}-${this.size}`,
           {
-            'hiui-bar-padding': this.use_padding,
-            'hiui-bar-center': this.is_center,
-            'hiui-bar-middle': this.is_middle
+            [`${prefixCls}-padding`]: this.use_padding,
+            [`${prefixCls}-center`]: this.is_center,
+            [`${prefixCls}-middle`]: this.is_middle
           }
         ]
       }

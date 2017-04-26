@@ -3,11 +3,13 @@
 </template>
 
 <style lang="stylus">
-  @import '//at.alicdn.com/t/font_oqi318f7xmj3v7vi.css';
+  @import '//at.alicdn.com/t/font_lwhb3ft4di1f9a4i.css';
   @import './style/';
 </style>
 
 <script>
+  const prefixCls = 'hiui-icon'
+
   export default {
     name: 'Icon',
     props: {
@@ -32,11 +34,11 @@
     computed: {
       component_class () {
         return [
+          prefixCls,
           'iconfont',
-          'hiui-icon',
           `icon-${this.name}`,
           {
-            'hiui-icon-rotate': this.rotate
+            [`${prefixCls}-rotate`]: this.rotate
           }
         ]
       },

@@ -7,6 +7,8 @@
 </style>
 
 <script>
+  const prefixCls = 'hiui-spinner'
+
   export default {
     name: 'Spinner',
     props: {
@@ -24,9 +26,9 @@
       }
     },
     computed: {
-      component_class: function () {
+      component_class () {
         return [
-          'hiui-spinner'
+          prefixCls
         ]
       },
       styles () {
