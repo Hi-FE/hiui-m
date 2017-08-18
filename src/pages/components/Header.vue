@@ -12,7 +12,7 @@
   </header>
 </template>
 
-<style lang="stylus" scope>
+<style lang="stylus" scoped>
   @import '../../style/';
 
   _height = 60px;

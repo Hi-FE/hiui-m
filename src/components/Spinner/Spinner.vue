@@ -1,5 +1,11 @@
 <template>
-  <div :class="component_class" :style="styles"></div>
+  <div :class="component_class">
+    <div v-if="wrap" class="hiui-spinner-content">
+      <Icon name="loading" :rotate="true" :color="color" :size="size"></Icon>
+      <slot></slot>
+    </div>
+    <Icon v-else name="loading" :rotate="true" :color="color" :size="size"></Icon>
+  </div>
 </template>
 
 <style lang="stylus">
@@ -7,18 +13,24 @@
 </style>
 
 <script>
+  import Icon from '../Icon/'
+
   const prefixCls = 'hiui-spinner'
 
   export default {
     name: 'Spinner',
+    components: {
+      Icon
+    },
     props: {
-      size: {
-        default: 26,
-        type: Number
-      },
+      size: Number,
       color: {
-        default: '#666',
+        default: '',
         type: String
+      },
+      wrap: {
+        default: false,
+        type: Boolean
       }
     },
     data () {
@@ -28,14 +40,17 @@
     computed: {
       component_class () {
         return [
-          prefixCls
+          prefixCls,
+          {
+            [`${prefixCls}-wrap`]: this.wrap
+          }
         ]
       },
       styles () {
         return {
           width: `${this.size}px`,
           height: `${this.size}px`,
-          borderColor: `${this.color}`
+          color: `${this.color}`
         }
       }
     }

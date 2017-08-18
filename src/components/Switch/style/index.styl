@@ -33,11 +33,23 @@ for size in _size {
   background-color: _default;
   transition: background-color .3s;
 
+  input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+
   &::after {
     content: '';
     border-radius: 50%;
     position: absolute;
     background-color: #fff;
+    cursor: pointer;
     transition: transform .3s;
     z-index: 1;
   }
@@ -46,14 +58,12 @@ for size in _size {
     background-color: _active;
   }
 
-  input {
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    z-index: 2;
+  &.disabled {
+    opacity: .2;
+
+    input {
+      cursor: not-allowed;
+    }
   }
 }
 

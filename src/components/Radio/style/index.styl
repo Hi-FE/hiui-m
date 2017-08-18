@@ -1,0 +1,42 @@
+@import '../../style/';
+
+.hiui-radio {
+  cursor: pointer; display: inline-block; position:relative;user-select: none;
+
+  .radio-icon {
+
+    width:_radio_switch_md;height: _radio_switch_md;transition:border-color .3s;position: relative; display: inline-block; border-radius: 50%; border: 1px solid _grey; vertical-align: -2px;
+
+    .active-sign { display: block; position: absolute; top: 2px; left: 2px; right: 2px; bottom: 2px; background: _red; border-radius: 50%; }
+
+  }
+
+  .radio-label { display:inline-block;cursor:pointer; }
+
+  .hidden-input { opacity: 0; position:absolute; cursor: pointer; z-index:1; top:0; left:0; width:100%; height:100%; }
+
+  &:not(.disabled):hover {
+    .radio-icon { border-color: _grey_deep; }
+  }
+
+  &.active {
+    .radio-icon { border-color: _grey_deep; }
+  }
+
+  &.disabled {
+    opacity: .3; cursor:not-allowed
+
+    * { cursor:not-allowed }
+  }
+
+}
+
+for size in _size {
+  .hiui-radio-{size} {
+    font-size: _radio_font_ + size
+
+    .radio-icon {
+      width: _radio_switch_ + size;height: _radio_switch_ + size
+    }
+  }
+}

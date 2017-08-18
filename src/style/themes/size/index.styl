@@ -1,14 +1,14 @@
-_size_l = xsm, sm, md, lg, xlg;
+_size_o = xsm, sm, md, lg, xlg;
 _size = sm, md, lg;
 
 /*
  * gap
  */
-_gap_xsm = 6px;
-_gap_sm = 12px;
-_gap_md = 20px;
-_gap_lg = 30px;
-_gap_xlg = 44px;
+_gap_xsm = 14px;
+_gap_sm = 20px;
+_gap_md = 30px;
+_gap_lg = 44px;
+_gap_xlg = 62px;
 
 :export {
   gap_xsm: _gap_xsm;
@@ -19,11 +19,11 @@ _gap_xlg = 44px;
 }
 
 /*
- * size
+ * outer_size
  */
 _size_o_sm = 28px;
 _size_o_md = 40px;
-_size_o_lg = 52px;
+_size_o_lg = 56px;
 
 :export {
   size_o_sm: _size_o_sm;
@@ -32,7 +32,7 @@ _size_o_lg = 52px;
 }
 
 /*
- * size
+ * inner_size
  */
 _size_sm = 24px;
 _size_md = 34px;
@@ -43,3 +43,14 @@ _size_lg = 44px;
   size_md: _size_md;
   size_lg: _size_lg;
 }
+
+/*
+ * border-radius
+ */
+_border_radius = 3px;
+
+:export {
+  border_radius: _border_radius;
+}
+
+

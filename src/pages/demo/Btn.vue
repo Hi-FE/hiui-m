@@ -27,7 +27,7 @@
   </demo>
 </template>
 
-<style lang="stylus" scope>
+<style lang="stylus" scoped>
   .btn-group > button {
     margin: 2px 2px 2px 0;
     vertical-align: bottom;

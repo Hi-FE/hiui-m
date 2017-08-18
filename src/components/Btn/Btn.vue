@@ -1,5 +1,5 @@
 <template>
-  <button :class="component_class">
+  <button :class="component_class" @click="handleClick" :disabled="disabled">
     <Icon v-if="is_loading" name="loading" :rotate="true"></Icon>
     <Icon v-if="!is_loading && prefix" :name="prefix"></Icon>
     <span v-if="loading_text">
@@ -17,12 +17,14 @@
 </style>
 
 <script>
+  import Icon from '../Icon'
+
   const prefixCls = 'hiui-btn'
 
   export default {
     name: 'Btn',
     components: {
-      Icon: require('@/components/Icon/Icon.vue')
+      Icon
     },
     props: {
       size: {
@@ -47,9 +49,14 @@
           prefixCls,
           {
             [`${prefixCls}-${this.size}`]: this.size,
-            'disabled': this.disabled
+            'disabled': this.is_loading || this.disabled
           }
         ]
+      }
+    },
+    methods: {
+      handleClick (e) {
+        this.$emit('click', e)
       }
     }
   }

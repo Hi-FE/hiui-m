@@ -3,7 +3,7 @@
 </template>
 
 <style lang="stylus">
-  @import '//at.alicdn.com/t/font_lwhb3ft4di1f9a4i.css';
+  @import '//at.alicdn.com/t/font_i65wur19duc8fr.css';
   @import './style/';
 </style>
 
@@ -34,8 +34,8 @@
     computed: {
       component_class () {
         return [
-          prefixCls,
           'iconfont',
+          prefixCls,
           `icon-${this.name}`,
           {
             [`${prefixCls}-rotate`]: this.rotate

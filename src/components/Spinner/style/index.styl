@@ -1,20 +1,32 @@
 @import '../../style/';
 
 .hiui-spinner {
-  display: inline-block;
-  height: 26px;
-  width: 26px;
-  border: 8px solid #666;
-  border-right-color: transparent!important;
-  border-radius: 50%;
-  animation: rotate .75s linear infinite;
+  color: #666;
+  vertical-align: middle;
+  text-align: center;
+
+  &.hiui-spinner-wrap {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    color: _blue;
+    background-color: rgba(0, 0, 0, .8);
+    z-index: 99;
+
+    .hiui-spinner-content {
+      display: flex;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hiui-icon {
+      display: block;
+    }
+  }
 }
 
-@keyframes rotate {
-  form {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}

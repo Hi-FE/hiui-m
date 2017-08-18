@@ -34,6 +34,10 @@ export default {
         name: 'Spinner',
         cn_name: '加载动画',
         path: '/Spinner'
+      }, {
+        name: 'Rate',
+        cn_name: '评分',
+        path: '/Rate'
       }/* base */]
     }, {
       title: 'Data in',
@@ -41,6 +45,14 @@ export default {
         name: 'Switch',
         cn_name: '开关',
         path: '/Switch'
+      }, {
+        name: 'Radio',
+        cn_name: '单选框',
+        path: '/Radio'
+      }, {
+        name: 'CheckBox',
+        cn_name: '多选框',
+        path: '/CheckBox'
       }/* data-in */]
     }, {
       title: 'Data out',
@@ -48,6 +60,22 @@ export default {
         name: 'Toast',
         cn_name: '提示',
         path: '/Toast'
+      }, {
+        name: 'Price',
+        cn_name: '价格',
+        path: '/Price'
+      }, {
+        name: 'Modal',
+        cn_name: '弹出层',
+        path: '/Modal'
+      }, {
+        name: 'Tab',
+        cn_name: '标签栏',
+        path: '/Tab'
+      }, {
+        name: 'Loadmore',
+        cn_name: '加载更多',
+        path: '/Loadmore'
       }/* data-out */]
     }]
   }]

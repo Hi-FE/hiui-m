@@ -1,6 +1,6 @@
 <template>
   <demo title="{{Name}}" class="{{name}}-demo">
-    <demo-item name="Default" description="默认" :code="code">
+    <demo-item name="default" description="默认" :code="code">
       <{{cname}}></{{cname}}>
     </demo-item>
   </demo>
@@ -8,7 +8,7 @@
 
 <style lang="stylus" scope>
   @import '../../style/';
-  
+
   .{{name}}-demo {
   }
 </style>

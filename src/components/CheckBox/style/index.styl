@@ -1,0 +1,51 @@
+@import '../../style/';
+
+.hiui-checkbox {
+  display: inline-flex; justify-content: center; align-items: center; position: relative; user-select: none;
+
+  &.disabled {
+    opacity: .3
+
+    .hidden-input {
+      cursor: not-allowed;
+    }
+  }
+
+  &.active {
+    .box {
+      border-color: _grey_deep;
+    }
+  }
+
+  &:not(.disabled):hover {
+    .box {
+      border-color: _grey_deep;
+    }
+  }
+
+  .box {
+    border: 1px solid _grey; width: _checkbox_switch_md; height: _checkbox_switch_md; padding: 2px; display: inline-block; transition: border-color .3s; vertical-align: text-bottom;
+
+    .item {
+      width: 100%; height: 100%; background-color:_red; display:block;
+    }
+  }
+
+  .checkbox-label {
+    display:inline-block; margin-left:4px;
+  }
+
+  .hidden-input {
+    opacity: 0; position:absolute; cursor: pointer; z-index:1; top:0; left:0; width:100%; height:100%;
+  }
+}
+
+for size in _size {
+  .hiui-checkbox-{size} {
+    font-size: _checkbox_font_ + size
+
+    .box {
+      width: _checkbox_switch_ + size;height: _checkbox_switch_ + size
+    }
+  }
+}

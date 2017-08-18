@@ -1,0 +1,114 @@
+@import '../../style/';
+
+.hiui-tab {
+  position: relative;
+  height: _tab_height;
+  line-height: _tab_height;
+  margin-bottom: 15px;
+  border-bottom: 1px solid _grey_light;
+  white-space: nowrap;
+  box-sizing: content-box;
+
+  .hiui-tab-item {
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-size: 14px;
+    color: #777;
+    cursor: pointer;
+
+    &:hover {
+      color: #333;
+    }
+
+    &.active {
+      color: _tab_active_color;
+      border-bottom: 2px solid _tab_active_color;
+    }
+
+    .hiui-icon {
+      font-size: 16px;
+
+      &-prefix {
+        margin-right: 6px;
+      }
+
+      &-suffix {
+        margin-left: 6px;
+      }
+    }
+  }
+
+  &-padding {
+    .hiui-tab-item {
+      padding: 0 15px;
+    }
+  }
+
+  &-no_padding {
+    .hiui-tab-item {
+      padding: 0;
+      margin-right: 30px;
+    }
+  }
+
+  // theme: ticket
+  &-ticket {
+    border-bottom: 0;
+
+    .hiui-tab-item {
+      color: _tab_ticket_active_color;
+      background-color: _tab_ticket_color;
+      border-left: 1px dashed _white;
+
+      &:first-child, &.active, &.active+.hiui-tab-item {
+        border-left-width: 0;
+      }
+
+      &:hover {
+        color: _tab_ticket_active_color;
+      }
+
+      &.active {
+        color: _white;
+        background-color: _tab_ticket_active_color;
+        border-bottom: none;
+
+        &::after {
+          content: '';
+          position: absolute;
+          left: 50%;
+          top: 100%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 0;
+          border-style: solid;
+          border-width: 8px 10px 0 10px;
+          border-color: _tab_ticket_active_color transparent transparent transparent;
+        }
+      }
+    }
+  }
+
+  // theme: card
+  &-card {
+
+    .hiui-tab-item {
+      margin-right: 4px;
+      background-color: _tab_card_color;
+      border: 1px solid _grey_light;
+      border-bottom: 0;
+      border-radius: 4px 4px 0 0;
+
+      &.active {
+        color: _tab_card_active_color;
+        background-color: _white;
+        border-bottom: 0;
+        padding-top: 1px;
+        transform: translateY(1px);
+      }
+    }
+  }
+}

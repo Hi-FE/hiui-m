@@ -1,17 +1,31 @@
 /* base */
+import Rate from './Rate'
 import Spinner from './Spinner'
 import Btn from './Btn'
 import Icon from './Icon'
 import Bar from './Bar'
 
 /* data-in */
+import CheckBox from './CheckBox'
+import Radio from './Radio'
 import Switch from './Switch'
 
 /* data-out */
+import Loadmore from './Loadmore'
+import Tab from './Tab'
+import Modal from './Modal'
+import Price from './Price'
 import Toast from './Toast'
 
 const install = (Vue) => {
   /* component */
+  Vue.component(Rate.name, Rate)
+  Vue.component(CheckBox.name, CheckBox)
+  Vue.component(Radio.name, Radio)
+  Vue.component(Loadmore.name, Loadmore)
+  Vue.component(Tab.name, Tab)
+  Vue.component(Modal.name, Modal)
+  Vue.component(Price.name, Price)
   Vue.component(Spinner.name, Spinner)
   Vue.component(Btn.name, Btn)
   Vue.component(Icon.name, Icon)
@@ -28,6 +42,13 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   /* export */
+  Rate,
+  CheckBox,
+  Radio,
+  Loadmore,
+  Tab,
+  Modal,
+  Price,
   Spinner,
   Btn,
   Icon,

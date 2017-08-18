@@ -1,0 +1,30 @@
+@import '../../style/';
+
+.hiui-rate {
+  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  .hiui-rate-star {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+    &-disabled {
+      cursor: default;
+    }
+
+    &-active {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+
+  .hiui-rate-text {
+    font-size: 14px;
+    color: #666;
+    margin-left: 3px;
+  }
+}

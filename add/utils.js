@@ -4,7 +4,7 @@ var path = require('path')
 //  打印错误
 const logError = (err) => {
  console.log()
- console.error(err) 
+ console.error(err)
  console.log()
 }
 
@@ -86,11 +86,11 @@ const replaceTemplate = (str, obj) => {
 }
 
 //  替换文件
-const replaceFile = (_path, _target, rule) => {  
+const replaceFile = (_path, _target, rule) => {
   //  根据规则替换文件内容
   var data = readFile(_path)
   data = replaceTemplate(data, rule)
-  
+
   //  根据规则替换文件名
   var file_name = path.basename(_path)
   file_name = replaceTemplate(file_name, rule)
@@ -100,7 +100,7 @@ const replaceFile = (_path, _target, rule) => {
 }
 
 //  读文件
-const readFile = (_path) => { 
+const readFile = (_path) => {
   return fs.readFileSync(_path, { flag: 'r+', encoding: 'utf8' })
 }
 

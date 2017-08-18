@@ -28,6 +28,34 @@ const preview_routes = [
     path: '/Spinner',
     name: 'Preview-Spinner',
     component: require('@/pages/demo/Spinner.vue')
+  }, {
+    path: '/Price',
+    name: 'Preview-Price',
+    component: require('@/pages/demo/Price.vue')
+  }, {
+    path: '/Modal',
+    name: 'Preview-Modal',
+    component: require('@/pages/demo/Modal.vue')
+  }, {
+    path: '/Tab',
+    name: 'Preview-Tab',
+    component: require('@/pages/demo/Tab.vue')
+  }, {
+    path: '/Loadmore',
+    name: 'Preview-Loadmore',
+    component: require('@/pages/demo/Loadmore.vue')
+  }, {
+    path: '/Radio',
+    name: 'Preview-Radio',
+    component: require('@/pages/demo/Radio.vue')
+  }, {
+    path: '/CheckBox',
+    name: 'Preview-CheckBox',
+    component: require('@/pages/demo/CheckBox.vue')
+  }, {
+    path: '/Rate',
+    name: 'Preview-Rate',
+    component: require('@/pages/demo/Rate.vue')
   }/* preview */
 ]
 
@@ -90,6 +118,55 @@ export default new Router({
         preview: './#/Spinner'
       },
       component: require('@/components/Spinner/index.md')
+    }, {
+      path: '/Components/Price',
+      name: 'Price',
+      meta: {
+        preview: './#/Price'
+      },
+      component: require('@/components/Price/index.md')
+    }, {
+      path: '/Components/Modal',
+      name: 'Modal',
+      meta: {
+        preview: './#/Modal'
+      },
+      component: require('@/components/Modal/index.md')
+    }, {
+      path: '/Components/Tab',
+      name: 'Tab',
+      meta: {
+        preview: './#/Tab'
+      },
+      component: require('@/components/Tab/index.md')
+    }, {
+      path: '/Components/Loadmore',
+      name: 'Loadmore',
+      meta: {
+        preview: './#/Loadmore'
+      },
+      component: require('@/components/Loadmore/index.md')
+    }, {
+      path: '/Components/Radio',
+      name: 'Radio',
+      meta: {
+        preview: './#/Radio'
+      },
+      component: require('@/components/Radio/index.md')
+    }, {
+      path: '/Components/CheckBox',
+      name: 'CheckBox',
+      meta: {
+        preview: './#/CheckBox'
+      },
+      component: require('@/components/CheckBox/index.md')
+    }, {
+      path: '/Components/Rate',
+      name: 'Rate',
+      meta: {
+        preview: './#/Rate'
+      },
+      component: require('@/components/Rate/index.md')
     }/* router */]
   }])
 })

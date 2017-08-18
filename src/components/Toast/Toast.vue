@@ -1,7 +1,8 @@
 <template>
-  <transition v-if="show" name="fade" @after-leave="afterLeave">
-    <div :class="component_class">
-      {{ content }}
+  <transition name="hiui_fade" @after-leave="afterLeave">
+    <div v-if="show" :class="component_class">
+      <!-- <Icon v-if="show_icon" :name="iconType[type]" :size="16"></Icon> -->
+      <div class="hiui-toast-content">{{ content }}</div>
     </div>
   </transition>
 </template>
@@ -19,14 +20,30 @@
       return {
         show: false,
         content: '',
-        time: 0,
-        callback: null
+        time: 2000,
+        type: 'default',
+        callback: null,
+        iconType: {
+          'default': 'info-circle',
+          'primary': 'info-circle',
+          'success': 'check-circle',
+          'error': 'close-circle',
+          'warning': 'exclamation-circle'
+        },
+        show_icon: {
+          type: Boolean,
+          default: true
+        }
       }
     },
     computed: {
       component_class () {
         return [
-          prefixCls
+          prefixCls,
+          {
+            [`${prefixCls}-${this.type}`]: this.type,
+            [`${prefixCls}-show_icon`]: this.show_icon
+          }
         ]
       }
     },
@@ -35,17 +52,21 @@
         this.show = false
       },
       afterLeave () {
-        this.$emit('destroy')
         this.$destroy(true)
       }
     },
     mounted () {
       document.body.appendChild(this.$el)
-      setTimeout(this.close, this.time)
+      this.time && setTimeout(this.close, this.time)
     },
     beforeDestroy () {
-      this.callback && this.callback()
       document.body.removeChild(this.$el)
+      this.callback && this.$nextTick(() => {
+        this.callback()
+      })
+    },
+    destroyed() {
+      this.$emit('destroyed')
     }
   }
 </script>

@@ -15,7 +15,7 @@
   </div>
 </template>
 
-<style lang="stylus" scope>
+<style lang="stylus" scoped>
   @import '../../style/index.styl';
 
   _demo_gap = 5px;

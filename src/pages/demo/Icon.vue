@@ -29,7 +29,7 @@
   </demo>
 </template>
 
-<style lang="stylus" scope>
+<style lang="stylus" scoped>
   .icon-demo .hiui-icon { margin: 0 2px; }
 </style>
 

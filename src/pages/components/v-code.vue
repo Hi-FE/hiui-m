@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<style lang="stylus" scope>
+<style lang="stylus" scoped>
   .demo-code code {
     padding-left: 10px;
     font-size: 12px;

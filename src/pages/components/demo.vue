@@ -7,7 +7,7 @@
   </div>
 </template>
 
-<style lang="stylus" scope>
+<style lang="stylus" scoped>
   @import '../../style/index.styl';
 
   .demo-wrap {

@@ -45,7 +45,7 @@ const template_path = path.normalize(path.join(__dirname, isFunction ? './method
 const component_path = path.normalize(path.join(__dirname, '../src/components/', component_name))
 
 //  demo模板位置
-const demo_template_path = path.normalize(path.join(__dirname, './demo/{{Name}}.vue'))
+const demo_template_path = path.normalize(path.join(__dirname, isFunction ? './method-demo/{{Name}}.vue' : './demo/{{Name}}.vue'))
 //  demo目标位置
 const demo_target_path = path.normalize(path.join(__dirname, '../src/pages/demo/'))
 
@@ -104,10 +104,10 @@ import {{Name}} from './{{Name}}'`
   }, {
     file: path.normalize(path.join(__dirname, '../src/components/index.js')),
     template: `/* ${isFunction ? 'method' : 'component'} */`,
-    content: isFunction ? 
+    content: isFunction ?
     `/* method */
-  Vue.use({{Name}})` 
-    : 
+  Vue.use({{Name}})`
+    :
     `/* component */
   Vue.component({{Name}}.name, {{Name}})`
   }, {
