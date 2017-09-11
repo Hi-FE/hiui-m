@@ -60,6 +60,10 @@ const preview_routes = [
     path: '/Fixed',
     name: 'Preview-Fixed',
     component: require('@/pages/demo/Fixed.vue')
+  }, {
+    path: '/Anchor',
+    name: 'Preview-Anchor',
+    component: require('@/pages/demo/Anchor.vue')
   }/* preview */
 ]
 
@@ -178,6 +182,20 @@ export default new Router({
         preview: './#/Fixed'
       },
       component: require('@/components/Fixed/index.md')
+    }, {
+      path: '/Components/method',
+      name: 'method',
+      meta: {
+        preview: './#/method'
+      },
+      component: require('@/components/method/index.md')
+    }, {
+      path: '/Components/Anchor',
+      name: 'Anchor',
+      meta: {
+        preview: './#/Anchor'
+      },
+      component: require('@/components/Anchor/index.md')
     }/* router */]
   }])
 })

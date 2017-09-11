@@ -11,6 +11,8 @@ import Radio from './Radio'
 import Switch from './Switch'
 
 /* data-out */
+import Anchor from './Anchor'
+import method from './method'
 import Fixed from './Fixed'
 import Loadmore from './Loadmore'
 import Tab from './Tab'
@@ -20,6 +22,7 @@ import Toast from './Toast'
 
 const install = (Vue) => {
   /* component */
+  Vue.component(method.name, method)
   Vue.component(Rate.name, Rate)
   Vue.component(CheckBox.name, CheckBox)
   Vue.component(Radio.name, Radio)
@@ -34,6 +37,7 @@ const install = (Vue) => {
   Vue.component(Switch.name, Switch)
 
   /* method */
+  Vue.use(Anchor)
   Vue.use(Fixed)
   Vue.use(Toast)
 }
@@ -44,6 +48,8 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   /* export */
+  Anchor,
+  method,
   Fixed,
   Rate,
   CheckBox,

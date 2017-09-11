@@ -80,6 +80,10 @@ export default {
         name: 'Fixed',
         cn_name: '固定指令',
         path: '/Fixed'
+      }, {
+        name: 'Anchor',
+        cn_name: '锚点指令',
+        path: '/Anchor'
       }/* data-out */]
     }]
   }]
