@@ -10,7 +10,7 @@ const install = (Vue) => {
       }
     })
 
-    vm = instance.$mount()
+    let vm = instance.$mount()
     vm.show = true
   }
 }

@@ -5,7 +5,9 @@ _default_deep = #666;
 _themes = 'red', 'blue', 'yellow', 'green';
 
 .hiui-btn {
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   margin-bottom: 0;
   text-align: center;
   white-space: nowrap;
@@ -37,7 +39,7 @@ for size in _size {
 
     .hiui-icon {
       font-size: _btn_icon_ + size;
-      vertical-align: top;
+      margin: 3px;
     }
   }
 }

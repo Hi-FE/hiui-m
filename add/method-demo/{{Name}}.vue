@@ -1,5 +1,5 @@
 <template>
-  <demo title="Icon" class="icon-demo">
+  <demo title="{{Name}}" class="{{name}}-demo">
     <demo-item name="default" description="默认" :code="code" lang="js">
       <Btn @click.native="${{name}}()">{{Name}}</Btn>
     </demo-item>
@@ -8,6 +8,8 @@
 
 <style lang="stylus" scoped>
   @import '../../style/';
+
+  .{{name}}-demo {}
 </style>
 
 <script>

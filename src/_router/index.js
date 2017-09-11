@@ -56,6 +56,10 @@ const preview_routes = [
     path: '/Rate',
     name: 'Preview-Rate',
     component: require('@/pages/demo/Rate.vue')
+  }, {
+    path: '/Fixed',
+    name: 'Preview-Fixed',
+    component: require('@/pages/demo/Fixed.vue')
   }/* preview */
 ]
 
@@ -167,6 +171,13 @@ export default new Router({
         preview: './#/Rate'
       },
       component: require('@/components/Rate/index.md')
+    }, {
+      path: '/Components/Fixed',
+      name: 'Fixed',
+      meta: {
+        preview: './#/Fixed'
+      },
+      component: require('@/components/Fixed/index.md')
     }/* router */]
   }])
 })

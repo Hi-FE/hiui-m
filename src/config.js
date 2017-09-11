@@ -76,6 +76,10 @@ export default {
         name: 'Loadmore',
         cn_name: '加载更多',
         path: '/Loadmore'
+      }, {
+        name: 'Fixed',
+        cn_name: '固定指令',
+        path: '/Fixed'
       }/* data-out */]
     }]
   }]

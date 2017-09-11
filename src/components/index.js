@@ -11,6 +11,7 @@ import Radio from './Radio'
 import Switch from './Switch'
 
 /* data-out */
+import Fixed from './Fixed'
 import Loadmore from './Loadmore'
 import Tab from './Tab'
 import Modal from './Modal'
@@ -33,6 +34,7 @@ const install = (Vue) => {
   Vue.component(Switch.name, Switch)
 
   /* method */
+  Vue.use(Fixed)
   Vue.use(Toast)
 }
 
@@ -42,6 +44,7 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   /* export */
+  Fixed,
   Rate,
   CheckBox,
   Radio,
