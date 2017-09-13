@@ -64,6 +64,14 @@ const preview_routes = [
     path: '/Anchor',
     name: 'Preview-Anchor',
     component: require('@/pages/demo/Anchor.vue')
+  }, {
+    path: '/Input',
+    name: 'Preview-Input',
+    component: require('@/pages/demo/Input.vue')
+  }, {
+    path: '/Swipe',
+    name: 'Preview-Swipe',
+    component: require('@/pages/demo/Swipe.vue')
   }/* preview */
 ]
 
@@ -183,19 +191,26 @@ export default new Router({
       },
       component: require('@/components/Fixed/index.md')
     }, {
-      path: '/Components/method',
-      name: 'method',
-      meta: {
-        preview: './#/method'
-      },
-      component: require('@/components/method/index.md')
-    }, {
       path: '/Components/Anchor',
       name: 'Anchor',
       meta: {
         preview: './#/Anchor'
       },
       component: require('@/components/Anchor/index.md')
+    }, {
+      path: '/Components/Input',
+      name: 'Input',
+      meta: {
+        preview: './#/Input'
+      },
+      component: require('@/components/Input/index.md')
+    }, {
+      path: '/Components/Swipe',
+      name: 'Swipe',
+      meta: {
+        preview: './#/Swipe'
+      },
+      component: require('@/components/Swipe/index.md')
     }/* router */]
   }])
 })

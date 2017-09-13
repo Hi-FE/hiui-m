@@ -1,0 +1,56 @@
+@import '../../style/';
+
+.hiui-input {
+  vertical-align: top; position: relative; display: inline-block; background-color:#fff; border-radius:_border_radius; transition:border-color .3s; transition:border-color .3s, box-shadow .3s; cursor:text;
+
+  &.textarea { height: auto !important; }
+
+  &.with-border {
+    border:1px solid _grey;
+    &:not(.textarea) {
+      padding: 0 10px;
+    }
+  }
+
+  &:not(.disabled):hover {
+    border-color: _grey_deep;
+  }
+  &.disabled {
+    cursor: not-allowed; opacity: .3
+
+    * {
+      cursor: not-allowed
+    }
+  }
+  &.with-border.focus {
+    border-color:_grey_deep; box-shadow: 0 0 0 2px rgba(153, 153, 153, .2);
+  }
+  &.animated {
+    .hiui-input-label {
+      margin-top: - + _input_float_gap_md;transform: translateY(-50%) scale(.8);
+    }
+
+    .hiui-input-field {
+      margin-top: _input_float_gap_md
+    }
+
+    .hiui-select-field {
+      margin-top: _input_float_gap_md
+    }
+  }
+
+  &.error {
+    border-color: _red !important;
+    &:hover { border-color: _red !important; }
+  }
+
+}
+
+for size in _size {
+  .hiui-input-{size} {
+    width: _input_width_ + size;height: _size_ + size; font-size: _input_font_ + size;
+  }
+  .hiui-input-{size}.float {
+    height: _input_float_height_ + size;
+  }
+}

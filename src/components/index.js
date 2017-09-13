@@ -6,13 +6,14 @@ import Icon from './Icon'
 import Bar from './Bar'
 
 /* data-in */
+import Input from './Input'
 import CheckBox from './CheckBox'
 import Radio from './Radio'
 import Switch from './Switch'
 
 /* data-out */
+import { Swipe, SwipeSlide } from './Swipe'
 import Anchor from './Anchor'
-import method from './method'
 import Fixed from './Fixed'
 import Loadmore from './Loadmore'
 import Tab from './Tab'
@@ -22,7 +23,9 @@ import Toast from './Toast'
 
 const install = (Vue) => {
   /* component */
-  Vue.component(method.name, method)
+  Vue.component(Swipe.name, Swipe)
+  Vue.component(SwipeSlide.name, SwipeSlide)
+  Vue.component(Input.name, Input)
   Vue.component(Rate.name, Rate)
   Vue.component(CheckBox.name, CheckBox)
   Vue.component(Radio.name, Radio)
@@ -48,8 +51,9 @@ if (typeof window !== 'undefined' && window.Vue) {
 
 export default {
   /* export */
+  Swipe,
+  Input,
   Anchor,
-  method,
   Fixed,
   Rate,
   CheckBox,

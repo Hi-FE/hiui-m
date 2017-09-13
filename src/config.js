@@ -53,6 +53,10 @@ export default {
         name: 'CheckBox',
         cn_name: '多选框',
         path: '/CheckBox'
+      }, {
+        name: 'Input',
+        cn_name: '输入框',
+        path: '/Input'
       }/* data-in */]
     }, {
       title: 'Data out',
@@ -84,6 +88,10 @@ export default {
         name: 'Anchor',
         cn_name: '锚点指令',
         path: '/Anchor'
+      }, {
+        name: 'Swipe',
+        cn_name: '走马灯',
+        path: '/Swipe'
       }/* data-out */]
     }]
   }]
