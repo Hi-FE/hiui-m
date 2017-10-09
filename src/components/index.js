@@ -1,3 +1,7 @@
+/* purecss */
+import 'purecss/build/base-min.css'
+import 'purecss/build/grids-min.css'
+
 /* base */
 import Rate from './Rate'
 import Spinner from './Spinner'

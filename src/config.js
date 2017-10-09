@@ -13,6 +13,10 @@ export default {
     cn_name: '规范',
     path: '/Standard'
   }, {
+    name: 'Color',
+    cn_name: '色彩',
+    path: '/Color'
+  }, {
     name: 'Components',
     cn_name: '组件',
     path: '/Components',

@@ -89,6 +89,10 @@ export default new Router({
       name: 'Standard',
       component: require('@/pages/views/standard.md')
     }, {
+      path: '/Color',
+      name: 'Color',
+      component: require('@/pages/views/color.md')
+    }, {
       path: '/Components',
       name: 'Components',
       component: require('@/pages/views/components.md')

@@ -16,10 +16,6 @@
       <Tab :data="['标签一', '标签二', '标签三']" v-model="theme_index" :theme="'ticket'" :type="'fix_width'"></Tab>
     </demo-item>
 
-    <demo-item name="trigger" description="触发类型" :code="trigger_code">
-      <Tab :data="['标签一', '标签二', '标签三']" v-model="trigger_index" :trigger="'hover'"></Tab>
-    </demo-item>
-
     <demo-item name="icon" description="图标" :code="icon_code">
       <Tab :data="['Home', 'Cart', 'User']" v-model="icon_index"></Tab>
       <Tab
@@ -82,9 +78,6 @@
 <Tab :data="['标签一', '标签二', '标签三']" v-model="theme_index"></Tab>
 <Tab :data="['标签一', '标签二', '标签三']" v-model="theme_index" :theme="'card'"></Tab>
 <Tab :data="['标签一', '标签二', '标签三']" v-model="theme_index" :theme="'ticket'" :type="'fix_width'"></Tab>
-        `,
-        trigger_code: `
-<Tab :data="['标签一', '标签二', '标签三']" v-model="trigger_index" trigger="hover"></Tab>
         `,
         icon_code: `
 <Tab :data="['Home', 'Cart', 'User']" v-model="icon_index"></Tab>
