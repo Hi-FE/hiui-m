@@ -1,53 +1,84 @@
 <template>
-  <i :class="component_class" :style="size_style"></i>
+  <i :class="classes" :style="styles" @click="clickHandled"></i>
 </template>
 
-<style lang="stylus">
-  @import '//at.alicdn.com/t/font_i65wur19duc8fr.css';
-  @import './style/';
-</style>
+<script lang="ts">
+import { Vue, Component, Prop } from 'vue-property-decorator'
 
-<script>
-  const prefixCls = 'hiui-icon'
+export type BtnSize = 'sm' | 'md' | 'lg'
 
-  export default {
-    name: 'Icon',
-    props: {
-      size: Number,
-      name: {
-        type: String,
-        required: true
-      },
-      color: {
-        default: '',
-        type: String
-      },
-      rotate: {
-        default: false,
-        type: Boolean
+@Component
+export default class Icon extends Vue {
+  @Prop({ required: true })
+  name: string
+
+  @Prop()
+  size: number
+
+  @Prop()
+  color: string
+
+  @Prop()
+  disabled: boolean
+
+  @Prop({ default: false })
+  rotate: boolean
+
+  get classes () {
+    return [
+      'iconfont',
+      'hiui-icon',
+      `icon-${this.name}`,
+      {
+        [`hiui-icon--rotate`]: this.rotate,
+        [`hiui-icon--disabled`]: this.disabled,
       }
-    },
-    data () {
-      return {
-      }
-    },
-    computed: {
-      component_class () {
-        return [
-          'iconfont',
-          prefixCls,
-          `icon-${this.name}`,
-          {
-            [`${prefixCls}-rotate`]: this.rotate
-          }
-        ]
-      },
-      size_style () {
-        return {
-          fontSize: this.size ? `${this.size}px` : '',
-          color: this.color || ''
-        }
-      }
+    ]
+  }
+
+  get styles () {
+    return {
+      fontSize: this.size ? `${this.size}px` : '',
+      color: this.color || ''
     }
-  };
+  }
+
+  clickHandled (e: MouseEvent) {
+    if (this.disabled) {
+      return false
+    }
+
+    this.$emit('click', e)
+  }
+}
 </script>
+
+<style lang="styl">
+  @import '//at.alicdn.com/t/font_282173_3wfhoenzy9.css';
+
+  .hiui-icon {
+    position: relative;
+    display: inline-block;
+    vertical-align: baseline;
+    /* font-size: _default_icon_size; */
+    /* color: _default_icon_color; */
+    overflow: hidden;
+  }
+
+  .hiui-icon--rotate {
+    animation: rotate 1s infinite linear;
+  }
+
+  .hiui-icon--disabled {
+    opacity: .3;
+  }
+
+  @keyframes rotate {
+    form {
+      transform: rotate(0);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
