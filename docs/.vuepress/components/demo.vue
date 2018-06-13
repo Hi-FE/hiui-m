@@ -1,7 +1,8 @@
 <template>
   <section class="demo-wrap">
     <div class="demo-header">
-      <icon name="qrcode" class="i-icon"></icon>
+      <icon v-if="link" name="mobilephone" class="i-icon" @click="showPhone = true"></icon>
+      <icon v-if="link" name="qrcode" class="i-icon" @click="showQrcode = true"></icon>
       <icon name="code" class="i-icon" @click="showCode = !showCode"></icon>
     </div>
     <div class="demo-content">
@@ -14,6 +15,11 @@
         <slot></slot>
       </div>
     </div>
+
+    <transition name="fade">
+      <modal-qrcode v-if="showQrcode" :link="demoLink" @hide="showQrcode = false"></modal-qrcode>
+      <modal-phone v-if="showPhone" :link="demoLink" @hide="showPhone = false"></modal-phone>
+    </transition>
   </section>
 </template>
 
@@ -23,6 +29,15 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
 @Component
 export default class Demo extends Vue {
   showCode = false
+  showQrcode = false
+  showPhone = false
+
+  @Prop()
+  link: string
+
+  get demoLink () {
+    return location.origin + (this as any).$site.base + this.link.slice(1) + '.html'
+  }
 }
 </script>
 
@@ -65,5 +80,12 @@ export default class Demo extends Vue {
   }
   .collapse-enter, .collapse-leave-to {
     max-height: 0px;
+  }
+
+  .fade-enter-active, .fade-leave-active {
+    transition: opacity .3s;
+  }
+  .fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    opacity: 0;
   }
 </style>

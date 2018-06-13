@@ -54,7 +54,7 @@ export default class Icon extends Vue {
 </script>
 
 <style lang="styl">
-  @import '//at.alicdn.com/t/font_282173_3wfhoenzy9.css';
+  @import '//at.alicdn.com/t/font_282173_y8za0xat9xd.css';
 
   .hiui-icon {
     position: relative;

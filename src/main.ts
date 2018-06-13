@@ -3,10 +3,10 @@ import './styles/theme/size.styl'
 
 import { VueConstructor } from 'vue'
 import * as Components from './components'
-import { setTheme, Color } from './utils/color'
+import { setTheme, Obj } from './utils/color'
 
 export interface ThemeOptions {
-  color: Color,
+  color: Obj,
   size: any
 }
 
@@ -23,14 +23,15 @@ const HiuiM = {
           setTheme(options.theme.color)
         }
         if (options.theme.hasOwnProperty('size')) {
+          setTheme(options.theme.size)
         }
       }
       if (options.hasOwnProperty('components')) {
         options.components.forEach(name => {
-          if (!Components[name]) {
+          if (!(Components as any)[name]) {
             console.warn(`[hiui-m warn]: 未找到组件 ${name}， 组件只允许使用 ${Object.keys(Components).join(', ')}`)
           } else {
-            Vue.use(Components[name])
+            Vue.use((Components as any)[name])
           }
         })
       } else {

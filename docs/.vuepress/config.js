@@ -29,7 +29,6 @@ module.exports = {
   },
   themeConfig: {
     repo: 'Hi-FE/hiui-m',
-    lastUpdated: '最后更新时间',
     nav: [
       { text: 'Home', link: '/' },
       { text: 'Documents', link: '/overview/quickStart' },

@@ -2616,6 +2616,10 @@ date-now@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/date-now/-/date-now-0.1.4.tgz#eaf439fd4d4848ad74e5cc7dbef200672b9e345b"
 
+davidshimjs-qrcodejs@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/davidshimjs-qrcodejs/-/davidshimjs-qrcodejs-0.0.2.tgz#2eb442a4495671079df7f7820ccfe74f45a9dec0"
+
 de-indent@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/de-indent/-/de-indent-1.0.2.tgz#b2038e846dc33baa5796128d0804b455b8c1e21d"

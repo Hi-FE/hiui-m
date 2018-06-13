@@ -30,7 +30,7 @@ Events:
 ### 尺寸
 多种尺寸应对不同场景
 
-<demo>
+<demo link="/demos/Btn/size">
   <btn-size></btn-size>
   <template slot="code">
 
@@ -39,4 +39,14 @@ Events:
   </template>
 </demo>
 
-<!-- include ./icon.md -->
+### 块状
+块状按钮占用整行宽度
+
+<demo link="/demos/Btn/block">
+  <btn-block></btn-block>
+  <template slot="code">
+
+<<< @/docs/demos/Btn/block.vue
+
+  </template>
+</demo>
