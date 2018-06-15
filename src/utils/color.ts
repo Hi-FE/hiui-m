@@ -5,8 +5,8 @@ export interface Obj {
 }
 
 export const setCssVariable = function (propertyName: string, value: string) {
-  if(typeof window !== 'undefined' || (process as any).browser){
-    document.documentElement.style.setProperty('--' + propertyName, value);
+  if (typeof window !== 'undefined' || (process as any).browser) {
+    document.documentElement.style.setProperty('--' + propertyName, value)
   }
 }
 

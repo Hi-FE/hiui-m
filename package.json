@@ -9,7 +9,7 @@
     "new:component": "sh scripts/newComponent.sh",
     "new:example": "sh scripts/newExample.sh",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target src/main.ts --name HiuiM",
+    "build": "vue-cli-service build --lib src/main.ts --name HiuiM",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e"
@@ -43,6 +43,8 @@
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2",
     "ts-loader": "^4.4.1",
+    "tslint": "^5.10.0",
+    "tslint-config-standard": "^7.0.0",
     "tslint-loader": "^3.6.0",
     "typescript": "^2.9.1",
     "vue-template-compiler": "^2.5.16",

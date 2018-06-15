@@ -14,7 +14,11 @@ module.exports = {
         exclude: /node_modules/,
         include: [path.join(__dirname, '../../src')],
         enforce: 'pre',
-        loader: 'tslint-loader'
+        loader: 'tslint-loader',
+        options: {
+          emitErrors: true,
+          configFile: path.join(__dirname, '../../tslint.json')
+        }
       }, {
         test: /\.tsx?$/,
         loader: 'ts-loader',

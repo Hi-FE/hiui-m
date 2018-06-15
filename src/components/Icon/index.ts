@@ -1,7 +1,10 @@
-import Icon from './Icon'
+import Icon from './Icon.vue'
 
-Icon.install = Vue => {
+const install = (Vue: any) => {
   Vue.component(Icon.name, Icon)
 }
 
-export default Icon
+export default {
+  install,
+  Icon
+}

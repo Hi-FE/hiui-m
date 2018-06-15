@@ -1,0 +1,14 @@
+{
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint-config-standard"
+  ],
+  "rules": {
+    "no-unnecessary-type-assertion": false,
+    "strict-type-predicates": false,
+    "trailing-comma": false,
+    "variable-name": false,
+    "no-floating-promises": false,
+    "no-unused-expression": false
+  }
+}
