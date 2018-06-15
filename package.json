@@ -1,22 +1,22 @@
 {
   "name": "hiui-m",
-  "version": "0.1.0",
+  "version": "2.0.0",
   "private": true,
+  "main": "dist/HiuiM.common.js",
   "scripts": {
     "dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "docs:deploy": "sh deploy.sh",
+    "docs:deploy": "sh scripts/deploy.sh",
     "new:component": "sh scripts/newComponent.sh",
     "new:example": "sh scripts/newExample.sh",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --lib src/main.ts --name HiuiM",
+    "build": "vue-cli-service build --target lib --name HiuiM src/main.ts",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
     "test:e2e": "vue-cli-service test:e2e"
   },
   "dependencies": {
     "parse-color": "^1.0.0",
-    "register-service-worker": "^1.0.0",
     "vue": "^2.5.16",
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^6.0.0",
@@ -24,6 +24,7 @@
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@commitlint/config-conventional": "^7.0.1",
     "@types/chai": "^4.1.0",
     "@types/mocha": "^2.2.46",
     "@vue/cli-plugin-babel": "^3.0.0-beta.15",
@@ -37,6 +38,7 @@
     "@vue/eslint-config-typescript": "^3.0.0-beta.16",
     "@vue/test-utils": "^1.0.0-beta.16",
     "chai": "^4.1.2",
+    "commitlint": "^7.0.0",
     "davidshimjs-qrcodejs": "^0.0.2",
     "node-sass": "^4.9.0",
     "sass-loader": "^7.0.1",

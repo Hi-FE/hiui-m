@@ -1,6 +1,6 @@
 import parseColor from 'parse-color'
 
-export interface Obj {
+export interface ThemeOption {
   [key: string]: string
 }
 
@@ -10,13 +10,13 @@ export const setCssVariable = function (propertyName: string, value: string) {
   }
 }
 
-export const setTheme = function (colors: Obj) {
+export const setTheme = function (colors: ThemeOption) {
   for (let name in colors) {
     setCssVariable(name, parseColor(colors[name]).hex)
   }
 }
 
-export const setThemeSize = function (sizes: Obj) {
+export const setThemeSize = function (sizes: ThemeOption) {
   for (let name in sizes) {
     setCssVariable(name, sizes[name])
   }

@@ -3,11 +3,11 @@ import './styles/theme/size.styl'
 
 import { VueConstructor } from 'vue'
 import * as Components from './components'
-import { setTheme, Obj } from './utils/color'
+import { setTheme, ThemeOption } from './utils/color'
 
 export interface ThemeOptions {
-  color: Obj,
-  size: any
+  color: ThemeOption,
+  size: ThemeOption
 }
 
 export interface HiuiMOptions {
@@ -43,8 +43,5 @@ const HiuiM = {
   }
 }
 
-if (typeof window !== 'undefined' && (window as any).Vue) {
-  (window as any).Vue.use(HiuiM)
-}
-
+export * from './components'
 export default HiuiM
