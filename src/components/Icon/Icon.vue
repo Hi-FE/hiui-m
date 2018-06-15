@@ -8,7 +8,7 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
 export type BtnSize = 'sm' | 'md' | 'lg'
 
 @Component
-export default class Icon extends Vue {
+export default class HiIcon extends Vue {
   @Prop({ required: true })
   name: string
 

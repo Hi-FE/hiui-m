@@ -1,9 +1,9 @@
 <template>
-  <div class="btn-group">
-    <btn size="sm">小按钮</btn>
-    <btn size="md">中按钮</btn>
-    <btn size="lg">大按钮</btn>
-  </div>
+  <example class="btn-group">
+    <hi-btn size="sm">小按钮</hi-btn>
+    <hi-btn size="md">中按钮</hi-btn>
+    <hi-btn size="lg">大按钮</hi-btn>
+  </example>
 </template>
 
 <script lang="ts">
@@ -16,7 +16,7 @@ export default class BtnSize extends Vue {
 
 <style lang="stylus">
   .btn-group button {
-    margin: 5px;
+    margin-right: 5px;
   }
 </style>
 

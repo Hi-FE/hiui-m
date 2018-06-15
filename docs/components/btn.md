@@ -1,5 +1,5 @@
 ---
-sidebarDepth: 0
+sidebarDepth: 2
 Props:
  - name: size
    description: 按钮尺寸
@@ -50,3 +50,16 @@ Events:
 
   </template>
 </demo>
+
+### 类型
+可在不同场景中使用各种类型选择
+
+<demo link="/demos/Btn/type">
+  <btn-type></btn-type>
+  <template slot="code">
+
+<<< @/docs/demos/Btn/type.vue
+
+  </template>
+</demo>
+

@@ -1,6 +1,6 @@
 <template>
   <example>
-    <hi-btn block>整行显示</hi-btn>
+    <hi-btn>test</hi-btn>
   </example>
 </template>
 
@@ -8,6 +8,11 @@
 import { Vue, Component } from 'vue-property-decorator'
 
 @Component
-export default class BtnBlock extends Vue {
+export default class BtnType extends Vue {
 }
 </script>
+
+<style lang="stylus">
+</style>
+
+

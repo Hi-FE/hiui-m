@@ -1,9 +1,9 @@
 <template>
   <section class="demo-wrap">
     <div class="demo-header">
-      <icon v-if="link" name="mobilephone" class="i-icon" @click="showPhone = true"></icon>
-      <icon v-if="link" name="qrcode" class="i-icon" @click="showQrcode = true"></icon>
-      <icon name="code" class="i-icon" @click="showCode = !showCode"></icon>
+      <hi-icon v-if="link" name="mobilephone" class="i-icon" @click="showPhone = true"></hi-icon>
+      <hi-icon v-if="link" name="qrcode" class="i-icon" @click="showQrcode = true"></hi-icon>
+      <hi-icon name="code" class="i-icon" @click="showCode = !showCode"></hi-icon>
     </div>
     <div class="demo-content">
       <transition name="collapse">

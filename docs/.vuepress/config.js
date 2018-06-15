@@ -42,11 +42,27 @@ module.exports = {
         ]
       },
       {
-        title: '基础组件',
+        title: 'Base',
         collapsable: false,
         children: [
-          '/components/icon',
-          '/components/btn'
+          '/components/Icon',
+          '/components/Btn',
+          // Shell: New Base Component
+        ]
+      },
+      {
+        title: 'Data in',
+        collapsable: false,
+        children: [
+          '/components/Input',
+          // Shell: New Data in Component
+        ]
+      },
+      {
+        title: 'Data out',
+        collapsable: false,
+        children: [
+          // Shell: New Data out Component
         ]
       }
     ]

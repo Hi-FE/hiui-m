@@ -6,6 +6,8 @@
     "dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "docs:deploy": "sh deploy.sh",
+    "new:component": "sh scripts/newComponent.sh",
+    "new:example": "sh scripts/newExample.sh",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target src/main.ts --name HiuiM",
     "lint": "vue-cli-service lint",

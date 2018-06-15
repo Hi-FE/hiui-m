@@ -10,7 +10,7 @@ import { Vue, Component, Prop } from 'vue-property-decorator'
 export type BtnSize = 'sm' | 'md' | 'lg'
 
 @Component
-export default class Btn extends Vue {
+export default class HiBtn extends Vue {
   text = '测试！'
 
   @Prop({ default: 'md' })
