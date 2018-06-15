@@ -13,7 +13,8 @@
     "build": "vue-cli-service build --target lib --name HiuiM src/main.ts",
     "lint": "vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e"
+    "test:e2e": "vue-cli-service test:e2e",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "dependencies": {
     "parse-color": "^1.0.0",
@@ -51,9 +52,6 @@
     "typescript": "^2.9.1",
     "vue-template-compiler": "^2.5.16",
     "vuepress": "^0.10.1"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
   },
   "browserslist": [
     "> 1%",
