@@ -36,7 +36,6 @@ export default class ${NAME}${ENAME} extends Vue {
 
 <style lang=\"stylus\">
 </style>
-
 " > docs/demos/$NAME/$ELNAME.vue
 
   # 创建 demos/NAME/ELNAME.md 文件

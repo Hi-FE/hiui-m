@@ -25,8 +25,13 @@
 
 <script lang="ts">
 import { Vue, Component, Prop } from 'vue-property-decorator'
+import Icon from '@/components/Icon'
 
-@Component
+@Component({
+  components: {
+    HiIcon: Icon
+  }
+})
 export default class Demo extends Vue {
   showCode = false
   showQrcode = false

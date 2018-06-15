@@ -1,10 +1,7 @@
 import Btn from './Btn.vue'
 
-const install = (Vue: any) => {
+(Btn as any).install = (Vue: any) => {
   Vue.component(Btn.name, Btn)
 }
 
-export default {
-  install,
-  Btn
-}
+export default Btn

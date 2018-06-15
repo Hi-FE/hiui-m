@@ -62,7 +62,6 @@ export default class Hi${NAME} extends Vue {
 .hiui-${LNAME} {
 }
 </style>
-
 " > src/components/$NAME/$NAME.vue
 
   # 创建 componets/NAME/index.ts 文件
@@ -73,7 +72,6 @@ ${NAME}.install = Vue => {
 }
 
 export default ${NAME}
-
 " > src/components/$NAME/index.ts
 
   # 添加导入
