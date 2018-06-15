@@ -37,10 +37,14 @@ export default class HiIcon extends Vue {
   }
 
   get styles () {
-    return {
-      fontSize: this.size ? `${this.size}px` : '',
-      color: this.color || ''
+    let styles: any = {}
+    if (this.size !== void 0) {
+      styles.fontSize = `${this.size}px`
     }
+    if (this.color) {
+      styles.color = this.color
+    }
+    return styles
   }
 
   clickHandled (e: MouseEvent) {
@@ -60,8 +64,6 @@ export default class HiIcon extends Vue {
     position: relative;
     display: inline-block;
     vertical-align: baseline;
-    /* font-size: _default_icon_size; */
-    /* color: _default_icon_color; */
     overflow: hidden;
   }
 

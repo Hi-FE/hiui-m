@@ -53,7 +53,7 @@
     "vuepress": "^0.10.1"
   },
   "gitHooks": {
-    "commitmsg": "commitlint -e $GIT_PARAMS"
+    "commit-msg": "commitlint -e $GIT_PARAMS"
   },
   "browserslist": [
     "> 1%",
