@@ -14,5 +14,3 @@ export default class BtnType extends Vue {
 
 <style lang="stylus">
 </style>
-
-

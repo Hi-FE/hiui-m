@@ -10,14 +10,13 @@ module.exports = {
     },
     module: {
       rules: [{
-        test: /\.ts$/,
+        test: /\.(vue|(j|t)sx?)$/,
         exclude: /node_modules/,
-        include: [path.join(__dirname, '../../src')],
+        loader: 'eslint-loader',
         enforce: 'pre',
-        loader: 'tslint-loader',
         options: {
-          emitErrors: true,
-          configFile: path.join(__dirname, '../../tslint.json')
+          cache: false,
+          formatter: require('eslint/lib/formatters/codeframe')
         }
       }, {
         test: /\.tsx?$/,

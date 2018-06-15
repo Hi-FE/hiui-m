@@ -22,5 +22,3 @@ export default class HiInput extends Vue {
 .hiui-input {
 }
 </style>
-
-

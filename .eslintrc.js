@@ -1,5 +1,5 @@
 module.exports = {
-  root: true,
+  root: false,
   env: {
     node: true
   },
@@ -10,6 +10,7 @@ module.exports = {
   ],
   rules: {
     "comma-dangle": 'off',
+    "space-infix-ops": "off",
     'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off'
   }
 }

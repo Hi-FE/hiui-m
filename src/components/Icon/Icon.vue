@@ -30,8 +30,8 @@ export default class HiIcon extends Vue {
       'hiui-icon',
       `icon-${this.name}`,
       {
-        [`hiui-icon--rotate`]: this.rotate,
-        [`hiui-icon--disabled`]: this.disabled,
+        'hiui-icon--rotate': this.rotate,
+        'hiui-icon--disabled': this.disabled,
       }
     ]
   }

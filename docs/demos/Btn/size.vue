@@ -19,4 +19,3 @@ export default class BtnSize extends Vue {
     margin-right: 5px;
   }
 </style>
-

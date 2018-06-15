@@ -83,4 +83,3 @@ export default class HiBtn extends Vue {
   }
 }
 </style>
-

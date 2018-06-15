@@ -16,14 +16,14 @@ export default class ModalQrcode extends Vue {
   link: string
 
   mounted () {
-    this.qrcode = new QRCode(this.$refs.qrcode, {
+    this.qrcode = new (QRCode as any)(this.$refs.qrcode, {
       text: this.link,
       width: 280,
       height: 280,
-      colorDark : "#000000",
-      colorLight : "#ffffff",
+      colorDark : '#000000',
+      colorLight : '#ffffff',
       correctLevel : QRCode.CorrectLevel.H
-    });
+    })
   }
 }
 </script>
@@ -48,4 +48,3 @@ export default class ModalQrcode extends Vue {
     background-color: #fff;
   }
 </style>
-
